@@ -30,3 +30,6 @@
 
 当前版本用于比赛评测、答辩演示和后续工程化迭代，尚未声明为通用商业发行版。具体阶段说明请参阅 `README_PHASE1.md`、`README_PHASE2.md`、`README_PHASE3.md` 与 `docs/`。
 
+## 生产数据复现
+
+私有仓库包含经完整性校验的生产数据逻辑快照，覆盖 PostgreSQL、多版本知识对象、托管知识库和比赛 RAG 索引。快照不含任何明文密码、Token 或私钥。数据范围、校验值和恢复步骤见 `reproduction/README.md`。

@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "snapshot": "ruichuang-production-snapshot-20260813.tar.gz",
+  "sha256": "4b85d7e21fa7f7d9aecc8b697a5b37f150b16b303e3006888bdd1862c4d0f2b0",
+  "compressed_bytes": 55948445,
+  "source_application_git_head": "a1f1486d44a0f8c8fe3c25c9b46b0c7a4c04bfcb",
+  "postgres": {
+    "format": "custom",
+    "tables": 7,
+    "rows": 200
+  },
+  "object_store": {
+    "versions": 658,
+    "delete_markers": 0
+  },
+  "knowledge_store_files": 18,
+  "rag_asset_files": 61,
+  "model_inventory_files": 48,
+  "model_inventory_bytes": 8008642576,
+  "contains_plaintext_credentials": false
+}
