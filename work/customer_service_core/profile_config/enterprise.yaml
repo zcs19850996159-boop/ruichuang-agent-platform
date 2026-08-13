@@ -1,0 +1,12 @@
+profile: enterprise
+competition_patches_enabled: false
+safety_policy:
+  evidence_required: true
+  permission_aware_retrieval: true
+  direct_answer_overrides_allowed: false
+cache_policy:
+  enabled: true
+  bind_tenant: true
+  bind_permission_scope: true
+  bind_knowledge_version: true
+

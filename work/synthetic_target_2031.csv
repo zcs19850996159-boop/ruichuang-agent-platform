@@ -1,0 +1,2 @@
+﻿id,question,category,source_manual,knowledge_point,novelty_reason,max_similarity_to_existing,risk_note,closest_existing_question
+2031,VR头显为什么不建议12岁以下儿童使用？使用前家长需要注意什么？,cn_manual,VR头显手册,12岁以下儿童限制,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.327,OK,"""使用发电机的直流保护器时，我需要注意什么？"""

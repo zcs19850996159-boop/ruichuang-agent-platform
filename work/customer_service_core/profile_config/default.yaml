@@ -1,0 +1,8 @@
+profile: default
+competition_patches_enabled: false
+cache_policy:
+  enabled: true
+  bind_knowledge_version: true
+  bind_model_version: true
+  bind_prompt_version: true
+

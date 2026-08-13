@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-07-30",
+  "change": "controlled-local-competition-adapter-cutover",
+  "status": "completed",
+  "scope": {
+    "client": "Codex MCP and ruichuang-customer-service Skill",
+    "stable_local_endpoint": "http://127.0.0.1:18877",
+    "previous_server_target": "127.0.0.1:8877",
+    "active_server_target": "127.0.0.1:8878",
+    "profile": "competition",
+    "knowledge_space": "competition",
+    "knowledge_version": "competition-kb-v1"
+  },
+  "security": {
+    "forwarding_key_target": "127.0.0.1:8878",
+    "forwarding_key_allows_other_targets": false,
+    "client_api_credential_changed": false,
+    "phase3_credential_aligned_to_frozen_competition_credential": true,
+    "old_phase3_only_credential_invalidated": true,
+    "server_authorized_keys_backup": "/root/.ssh/authorized_keys.pre_phase3_cutover_20260730"
+  },
+  "acceptance": {
+    "phase3_ready": true,
+    "phase2_rollback_ready": true,
+    "mcp_request_succeeded": true,
+    "question": "如何按照手册更换电池？",
+    "manual_id": "Manual27",
+    "images": [
+      "Manual27_1",
+      "Manual27_2",
+      "Manual27_3"
+    ],
+    "constraint_pass": true,
+    "escalation_required": false,
+    "elapsed_ms": 20.25,
+    "application_version": "3.5.0-phase3c"
+  },
+  "rollback": {
+    "service": "phase2",
+    "server_target": "127.0.0.1:8877",
+    "retained": true,
+    "procedure": "Restore the dedicated key permitopen target and local SSH forwarding target from 8878 to 8877, then verify /health and one MCP request."
+  },
+  "limitations": {
+    "external_public_ingress_switched": false,
+    "official_submission_performed": false,
+    "external_monitoring_configured": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "1.0",
+  "profile": "competition",
+  "knowledge_space": "competition",
+  "cases": [
+    {
+      "id": "manual-battery",
+      "title": "中文手册图文回答",
+      "question": "如何按照手册更换电池？",
+      "session_id": "final-demo-battery",
+      "expected_manual": "Manual27",
+      "expected_images": [
+        "Manual27_1",
+        "Manual27_2",
+        "Manual27_3"
+      ],
+      "expect_escalation": false,
+      "purpose": "展示低延迟快通道、原生流式输出以及文字与三张手册图片按步骤交错出现。"
+    },
+    {
+      "id": "multimodal-air-conditioner",
+      "title": "用户图片输入与手册证据",
+      "question": "结合我上传的图片，如何使用空调的等离子净化功能？",
+      "session_id": "final-demo-vision",
+      "attachment": "assets/Manual01_18.jpg",
+      "expected_manual": "Manual01",
+      "expected_images": [
+        "Manual01_18"
+      ],
+      "expect_escalation": false,
+      "purpose": "展示图片输入、产品知识检索和已验证手册图片证据。"
+    }
+  ],
+  "managed_knowledge_case": {
+    "id": "new-manual-chair",
+    "title": "新增手册自动入库",
+    "tenant_id": "final-demo",
+    "knowledge_space": "official-manuals",
+    "product_id": "ergonomic-chair",
+    "manual": "assets/人体工学椅手册.txt",
+    "question": "人体工学椅的腰枕按摩功能如何启用？",
+    "required_answer_phrase": "USB",
+    "baseline_version": "official-txt-v1",
+    "purpose": "展示无需人工切块：上传原始 TXT，自动解析与图片绑定，质量评测，人工批准发布，再由企业工作台查询新知识。"
+  }
+}

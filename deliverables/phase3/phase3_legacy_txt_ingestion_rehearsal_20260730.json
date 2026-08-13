@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0",
+  "gate": "legacy-official-txt-ingestion-rehearsal",
+  "status": "passed",
+  "executed_at": "2026-07-30",
+  "objective": "Verify that old official TXT manuals can be parsed, chunked, image-bound, evaluated, published, queried, rolled back, and restored without manual chunk construction or competition-profile changes.",
+  "source_format": {
+    "shape": "[manual text, ordered image id list]",
+    "parser": "official-json-text-v1",
+    "baseline_manual": "空气净化器手册.txt",
+    "appended_manual": "人体工学椅手册.txt"
+  },
+  "implementation_changes": [
+    "Official JSON-envelope TXT is parsed as structured manual text instead of indexing the JSON wrapper.",
+    "Ordered <PIC> markers are bound automatically to the ordered official image identifiers.",
+    "Referenced image files are copied into the immutable managed knowledge version.",
+    "Publishing is blocked when a referenced image is missing.",
+    "A new product manual is appended to the active knowledge version instead of replacing all existing manuals.",
+    "A manual for an existing product replaces only that product inside the next aggregate version.",
+    "Published versions remain immutable and activation or rollback only changes the active pointer."
+  ],
+  "candidate_gate": {
+    "status": "passed",
+    "elapsed_ms": 2371.13,
+    "tenant_id": "txt-rehearsal-1785393688-54e058",
+    "knowledge_space_id": "official-manuals"
+  },
+  "production_gate": {
+    "status": "passed",
+    "elapsed_ms": 2789.27,
+    "tenant_id": "txt-rehearsal-1785393870-8aded2",
+    "knowledge_space_id": "official-manuals",
+    "baseline_version": "official-txt-v1",
+    "appended_version": "official-txt-v2",
+    "document_count": 2,
+    "chunk_count": 4,
+    "image_count": 43,
+    "missing_image_count": 0,
+    "managed_answer": {
+      "question": "人体工学椅的腰枕按摩功能如何启用？",
+      "contains_required_usb_instruction": true,
+      "escalation_required": false
+    },
+    "published_image_http_status": 200,
+    "rollback_to_v1": true,
+    "restore_to_v2": true,
+    "competition_profile_unchanged": true
+  },
+  "post_cutover_api_gate": {
+    "status": "passed",
+    "elapsed_ms": 2108.51,
+    "stream_event_counts": {
+      "status": 3,
+      "answer_metadata": 1,
+      "answer_delta": 71,
+      "final": 1
+    },
+    "streamed_text_equals_final": true,
+    "stream_manual": "Manual27",
+    "sync_tool_manual": "Manual27",
+    "official_chat_manual": "Manual27",
+    "images": [
+      "Manual27_1",
+      "Manual27_2",
+      "Manual27_3"
+    ],
+    "constraint_verification": "passed",
+    "phase2_rollback_health_http_status": 200
+  },
+  "regression": {
+    "phase3": {
+      "passed": 43,
+      "total": 43
+    },
+    "phase1_phase2": {
+      "passed": 29,
+      "total": 29
+    },
+    "all": {
+      "passed": 72,
+      "total": 72,
+      "warnings": [
+        "One existing Starlette TestClient deprecation warning."
+      ]
+    }
+  },
+  "deployment_state": {
+    "phase3_server_port": 8878,
+    "phase3_pid_at_acceptance": 11495,
+    "local_adapter": "http://127.0.0.1:18877",
+    "local_adapter_ready_http_status": 200,
+    "phase2_rollback_port": 8877,
+    "phase2_rollback_ready_http_status": 200,
+    "public_ingress_switched": false
+  },
+  "server_artifacts": {
+    "candidate_report": "/root/autodl-tmp/customer_agent_phase3/legacy_txt_ingestion_gate_20260730.json",
+    "production_report": "/root/autodl-tmp/customer_agent_phase3/legacy_txt_ingestion_gate_20260730_production.json",
+    "post_cutover_api_report": "/root/autodl-tmp/customer_agent_phase3/api_compatibility_after_txt_20260730.json",
+    "pre_change_backup": "/root/autodl-tmp/customer_agent_phase3/backups/txt_ingestion_pre_20260730",
+    "verified_upload_sha256": "fc73f437be26929e97b103739d94ddf616020d3d6f83c825778d579455c20c8c"
+  },
+  "repeatable_gate": "work/phase3_remote/work/e2e/legacy_txt_ingestion_gate.py",
+  "operational_result": "Future official TXT manuals no longer require hand-written chunking or manual knowledge-index construction. They still require an administrative quality review and explicit publish approval."
+}

@@ -1,0 +1,8 @@
+﻿id,question,category,source_manual,knowledge_point,novelty_reason,max_similarity_to_existing,risk_note,closest_existing_question
+2032,佩戴VR头显前，为什么要清理大于游玩区域的活动空间？需要移开哪些障碍物？,cn_manual,VR头显手册,游玩区域障碍物清理,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.215,OK,"""为确保安全且最佳的使用效果，游玩区域的推荐尺寸是多少？"""
+2081,洗碗机的盐量指示灯和亮碟剂指示灯分别提醒用户什么？,cn_manual,洗碗机手册,盐量和亮碟剂指示灯,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.348,OK,"""空气净化器的室内空气质量指示灯是什么？"""
+2140,How can I change font size or page display settings while reading on the eReader?,en_manual,eReader manual,font size setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.558,OK,How can I change the default energy-saving setting on the coffee machine?
+2142,How can I adjust the eReader screen backlight or sleep timeout setting?,en_manual,eReader manual,screen backlight timeout,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.485,OK,How do I set the light timer on the over-the-range microwave?
+2146,What should I check if the fax machine has power but cannot send or receive through the telephone line?,en_manual,Fax manual,telephone line connection check,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.476,OK,"When connecting the fax machine, what procedure should I follow to complete the setup?"
+2193,How should I test or use the snowmobile emergency stop switch before riding?,en_manual,Snowmobile manual,emergency stop switch,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.526,OK,"""How do I use the battery conversion feature before sailing?"""
+2197,How can I set a television sleep timer so it turns off automatically?,en_manual,TV/radio manual,sleep timer,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.518,OK,"""How can I use the bilge pump of the boat?"""

@@ -1,0 +1,3 @@
+﻿id,question,category,source_manual,knowledge_point,novelty_reason,max_similarity_to_existing,risk_note,closest_existing_question
+2180,"What is the CMOS battery used for on the motherboard, and when might it need replacement?",en_manual,Motherboard manual,CMOS battery,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.489,OK,"""What is the proper procedure for cleaning the front caster wheel of a vacuum cleaner?"""
+2186,How should I align the lid marks before locking or unlocking the pressure cooker lid?,en_manual,Pressure cooker air fryer manual,lid alignment marks,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.529,OK,"""How can you install the sealing ring for a multi-use pressure cooker and air fryer?"""

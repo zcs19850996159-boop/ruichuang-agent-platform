@@ -1,0 +1,135 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-07-30",
+  "gate": "phase3-competition-profile-cutover",
+  "status": "passed_for_controlled_canary",
+  "traffic_switched": false,
+  "candidate": {
+    "service": "phase3",
+    "port": 8878,
+    "profile": "competition",
+    "knowledge_space": "competition",
+    "knowledge_version": "competition-kb-v1",
+    "official_adapter": "/chat"
+  },
+  "rollback": {
+    "service": "phase2",
+    "port": 8877,
+    "health_status": 200,
+    "retained": true
+  },
+  "frozen_baseline": {
+    "official_score": 0.81625,
+    "total": 400,
+    "api_ok": 400,
+    "route_type_ok": 400,
+    "manual_ok": 400,
+    "constraint_pass": 400,
+    "pic_match_images": 400,
+    "image_exact_set": 398,
+    "image_exact_order": 398,
+    "image_avg_f1": 0.9991
+  },
+  "first_full_run": {
+    "total": 400,
+    "api_ok": 400,
+    "route_type_ok": 400,
+    "manual_ok": 400,
+    "constraint_pass": 397,
+    "pic_match_images": 400,
+    "image_exact_set": 398,
+    "image_exact_order": 398,
+    "image_avg_f1": 0.9991,
+    "isolated_retry_ids": [
+      "171",
+      "244",
+      "351"
+    ],
+    "issue_type": "model_generation_and_verifier_variance",
+    "latency_ms": {
+      "p50": 2491.0,
+      "p95": 3833.51,
+      "p99": 12134.29,
+      "max": 13383.55,
+      "mean": 2562.64,
+      "over_5000": 15,
+      "over_10000": 7
+    }
+  },
+  "isolated_retry": {
+    "total": 3,
+    "api_ok": 3,
+    "route_type_ok": 3,
+    "manual_ok": 3,
+    "constraint_pass": 3,
+    "pic_match_images": 3,
+    "image_exact_set": 3,
+    "image_exact_order": 3,
+    "issues": 0
+  },
+  "full_warm_replay": {
+    "total": 400,
+    "api_ok": 400,
+    "route_type_ok": 400,
+    "manual_ok": 400,
+    "constraint_pass": 400,
+    "pic_match_images": 400,
+    "image_exact_set": 398,
+    "image_exact_order": 398,
+    "image_avg_f1": 0.9991,
+    "issues": 0,
+    "elapsed_seconds": 61.5,
+    "latency_ms": {
+      "p50": 12.38,
+      "p95": 3095.56,
+      "p99": 4238.37,
+      "max": 6964.97,
+      "mean": 591.22
+    },
+    "exact_cache": {
+      "hits": 270,
+      "p50_ms": 7.46,
+      "p95_ms": 17.34,
+      "p99_ms": 70.85,
+      "max_ms": 119.76
+    },
+    "no_cache": {
+      "requests": 130,
+      "manual_requests": 80,
+      "policy_requests": 50,
+      "p50_ms": 2338.87,
+      "p95_ms": 3667.76,
+      "p99_ms": 6570.99,
+      "max_ms": 6964.97
+    }
+  },
+  "low_risk_latency_change": {
+    "startup_retrieval_warmup_enabled": true,
+    "warmup_elapsed_ms": 9288.03,
+    "service_exposes_ready_only_after_warmup": true,
+    "battery_smoke": {
+      "question": "如何按照手册更换电池？",
+      "cold_elapsed_ms": 2514.98,
+      "warm_cache_elapsed_ms": 4.01,
+      "manual": "Manual27",
+      "images": [
+        "Manual27_1",
+        "Manual27_2",
+        "Manual27_3"
+      ],
+      "constraint_pass": true
+    },
+    "normal_rate_limit_per_minute_restored": 60
+  },
+  "service_health": {
+    "phase3_ready_status": 200,
+    "phase3_workbench_status": 200,
+    "phase2_health_status": 200
+  },
+  "decision": {
+    "compatibility_gate_passed": true,
+    "latency_gate_passed_for_normal_requests": true,
+    "full_cutover_authorized": false,
+    "recommended_next_action": "Run a controlled canary that moves only the competition adapter to Phase 3 while keeping Phase 2 immediately available for rollback."
+  }
+}

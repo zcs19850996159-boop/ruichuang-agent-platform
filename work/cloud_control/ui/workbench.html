@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>睿创客服 · 聊天工作台</title>
+  <link rel="stylesheet" href="/control-ui/workbench.css">
+</head>
+<body>
+  <section id="login-view" class="login-view">
+    <header class="public-header">
+      <a class="brand" href="/workbench" aria-label="睿创客服首页">
+        <span class="brand-mark">R</span>
+        <span><strong>睿创客服</strong><small>RUICHUANG CUSTOMER SERVICE</small></span>
+      </a>
+      <nav aria-label="产品导航">
+        <a href="/admin">企业控制台</a>
+        <a href="/docs">API 文档</a>
+      </nav>
+    </header>
+
+    <main class="login-main">
+      <div class="login-copy">
+        <p class="eyebrow">GROUNDED CUSTOMER CARE</p>
+        <h1>让每一次回答，<br>都能回到证据。</h1>
+        <p>连接企业知识空间，以低延迟客服快通道回答产品操作、故障排查和售后问题。</p>
+        <div class="trust-row">
+          <span>租户隔离</span><span>证据引用</span><span>多模态输入</span>
+        </div>
+      </div>
+      <section class="login-card" aria-labelledby="login-title">
+        <p class="section-label">安全连接</p>
+        <h2 id="login-title">进入聊天工作台</h2>
+        <p id="login-helper" class="muted">比赛演示使用冻结知识库，回答协议与官方提交接口保持一致。</p>
+        <div class="mode-switch" role="group" aria-label="工作模式">
+          <button class="mode-option active" type="button" data-mode="competition" aria-pressed="true">
+            <strong>比赛演示</strong><span>冻结知识库</span>
+          </button>
+          <button class="mode-option" type="button" data-mode="enterprise" aria-pressed="false">
+            <strong>企业知识</strong><span>租户知识空间</span>
+          </button>
+        </div>
+        <form id="login-form">
+          <label id="tenant-field" hidden>租户 ID
+            <input id="tenant-input" autocomplete="organization" placeholder="例如：acme-cn" required>
+          </label>
+          <label><span id="token-label">比赛 API Token</span>
+            <input id="token-input" type="password" autocomplete="off" placeholder="输入比赛 API Token" required>
+          </label>
+          <button type="submit">安全连接</button>
+        </form>
+        <p class="token-note">Token 仅保存在当前页面内存，刷新或断开后立即清除。</p>
+        <p id="login-error" class="error" role="alert"></p>
+      </section>
+    </main>
+  </section>
+
+  <div id="workspace-view" class="workspace" hidden>
+    <aside class="sidebar">
+      <a class="brand brand-light" href="/workbench">
+        <span class="brand-mark">R</span>
+        <span><strong>睿创客服</strong><small>CHAT WORKBENCH</small></span>
+      </a>
+      <button id="new-chat" class="new-chat" type="button"><span>＋</span> 新建会话</button>
+
+      <div class="side-section recent-section">
+        <p>最近聊天</p>
+        <div id="recent-chats" class="recent-chats" aria-live="polite">
+          <div class="recent-empty">发送第一条消息后，会话会显示在这里</div>
+        </div>
+      </div>
+
+      <div class="side-section">
+        <p>运行模式</p>
+        <div id="sidebar-mode" class="sidebar-mode">比赛演示</div>
+      </div>
+
+      <div class="side-section compact">
+        <p>知识空间</p>
+        <label class="sr-only" for="space-select">知识空间</label>
+        <select id="space-select"></select>
+        <div id="space-status" class="space-status">等待连接</div>
+      </div>
+
+      <div class="side-section">
+        <p>快捷问题</p>
+        <button class="prompt-chip" type="button">如何按照手册更换电池？</button>
+        <button class="prompt-chip" type="button">设备无法启动，应该怎么排查？</button>
+        <button class="prompt-chip" type="button">这张图片里的部件是什么？</button>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="identity">
+          <span id="identity-avatar">—</span>
+          <div><strong id="identity-user">—</strong><small id="identity-role">—</small></div>
+        </div>
+        <button id="disconnect" class="icon-button" type="button" title="断开连接" aria-label="断开连接">↗</button>
+      </div>
+    </aside>
+
+    <main class="conversation">
+      <header class="conversation-header">
+        <div>
+          <p class="eyebrow">REAL-TIME ANSWERING</p>
+          <h1>客服对话</h1>
+        </div>
+        <div class="header-actions">
+          <span id="workspace-mode-badge" class="mode-badge">比赛演示</span>
+          <span class="live-indicator"><i></i> 服务就绪</span>
+          <a id="admin-link" href="/admin" hidden>管理控制台</a>
+        </div>
+      </header>
+
+      <section id="messages" class="messages" aria-live="polite">
+        <div id="welcome" class="welcome">
+          <div class="welcome-orb">R</div>
+          <p class="eyebrow">RUICHUANG AI</p>
+          <h2>今天需要解决什么问题？</h2>
+          <p>我会调用已发布的企业知识，返回带来源、置信度和图片证据的回答。</p>
+        </div>
+      </section>
+
+      <section class="composer-wrap">
+        <div id="attachment-preview" class="attachment-preview"></div>
+        <form id="composer" class="composer">
+          <label class="attach-button" for="file-input" title="添加图片">
+            <span>＋</span><span class="sr-only">添加图片</span>
+          </label>
+          <input id="file-input" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden>
+          <textarea id="question-input" rows="1" maxlength="6000" placeholder="输入产品操作、故障或售后问题…" required></textarea>
+          <button id="send-button" class="send-button" type="submit" aria-label="发送问题">↑</button>
+        </form>
+        <div class="composer-meta">
+          <span>Enter 发送 · Shift + Enter 换行</span>
+          <span id="composer-status">一次回答仅调用客服核心一次</span>
+        </div>
+      </section>
+    </main>
+
+    <aside class="inspector">
+      <header>
+        <p class="section-label">ANSWER TRACE</p>
+        <h2>回答依据</h2>
+      </header>
+      <div id="trace-empty" class="trace-empty">
+        <span>⌁</span>
+        <p>发送问题后，这里会显示知识版本、置信度、证据来源和校验结果。</p>
+      </div>
+      <div id="trace-content" hidden>
+        <div class="trace-grid">
+          <article><span>运行 Profile</span><strong id="trace-profile">—</strong></article>
+          <article><span>知识空间</span><strong id="trace-space">—</strong></article>
+          <article><span>知识版本</span><strong id="trace-version">—</strong></article>
+          <article><span>置信度</span><strong id="trace-confidence">—</strong></article>
+          <article><span>响应时间</span><strong id="trace-elapsed">—</strong></article>
+          <article><span>校验</span><strong id="trace-validation">—</strong></article>
+        </div>
+        <div id="escalation-note" class="escalation-note" hidden></div>
+        <section class="evidence-section">
+          <div class="evidence-heading"><h3>引用来源</h3><span id="evidence-count">0</span></div>
+          <div id="evidence-list"></div>
+        </section>
+      </div>
+      <footer>
+        <a href="/docs">查看 Tool API</a>
+        <span id="session-label">尚未开始会话</span>
+      </footer>
+    </aside>
+  </div>
+
+  <script src="/control-ui/workbench.js" defer></script>
+</body>
+</html>

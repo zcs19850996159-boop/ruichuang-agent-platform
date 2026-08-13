@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>睿创客服 · 企业控制台</title>
+  <link rel="stylesheet" href="/control-ui/admin.css">
+</head>
+<body>
+  <header>
+    <div>
+      <p class="eyebrow">RUICHUANG CUSTOMER SERVICE</p>
+      <h1>企业控制台</h1>
+      <p class="subtitle">租户、成员、凭据与知识版本管理</p>
+    </div>
+    <nav aria-label="产品导航">
+      <a href="/workbench">聊天工作台</a>
+      <a href="/docs">API 文档</a>
+      <button id="disconnect" class="ghost" hidden>断开连接</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="login-panel" class="panel login-panel">
+      <div>
+        <p class="section-label">安全连接</p>
+        <h2>使用企业 API Token 登录</h2>
+        <p class="muted">Token 只保存在当前页面内存，刷新或断开后立即清除。</p>
+      </div>
+      <form id="login-form">
+        <label>租户 ID<input id="tenant-input" autocomplete="organization" required></label>
+        <label>API Token<input id="token-input" type="password" autocomplete="off" required></label>
+        <button type="submit">连接控制平面</button>
+      </form>
+      <p id="login-error" class="error" role="alert"></p>
+    </section>
+
+    <div id="workspace" hidden>
+      <section class="identity-strip">
+        <div><span>租户</span><strong id="identity-tenant">—</strong></div>
+        <div><span>用户</span><strong id="identity-user">—</strong></div>
+        <div><span>角色</span><strong id="identity-role">—</strong></div>
+        <div><span>状态</span><strong class="status-ok">已认证</strong></div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <div class="panel-head">
+            <div><p class="section-label">MEMBERS</p><h2>成员与角色</h2></div>
+            <button id="refresh-members" class="ghost">刷新</button>
+          </div>
+          <form id="member-form" class="inline-form">
+            <input id="member-id" placeholder="用户 ID" required>
+            <input id="member-name" placeholder="显示名称" required>
+            <select id="member-role">
+              <option value="agent">agent</option>
+              <option value="viewer">viewer</option>
+              <option value="knowledge_manager">knowledge_manager</option>
+              <option value="admin">admin</option>
+            </select>
+            <button type="submit">添加成员</button>
+          </form>
+          <div id="members" class="table-wrap"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div><p class="section-label">KNOWLEDGE</p><h2>知识空间</h2></div>
+            <button id="refresh-spaces" class="ghost">刷新</button>
+          </div>
+          <form id="space-form" class="inline-form">
+            <input id="space-id" placeholder="空间 ID" required>
+            <input id="space-name" placeholder="空间名称" required>
+            <button type="submit">创建空间</button>
+          </form>
+          <div id="spaces" class="table-wrap"></div>
+          <div class="version-panel">
+            <h3 id="versions-title">选择知识空间查看版本</h3>
+            <div id="versions" class="table-wrap"></div>
+          </div>
+          <div class="version-panel">
+            <div class="panel-head">
+              <h3 id="staging-title">选择知识空间查看暂存版本</h3>
+              <button id="refresh-staging" class="ghost" type="button">刷新暂存列表</button>
+            </div>
+            <form id="staging-lookup-form" class="inline-form">
+              <input id="staging-lookup-id" placeholder="输入暂存 ID，例如 stg-…" required>
+              <button type="submit">按 ID 查询</button>
+            </form>
+            <div id="staging-list" class="table-wrap"></div>
+          </div>
+        </article>
+
+        <article class="panel release-panel">
+          <div class="panel-head">
+            <div>
+              <p class="section-label">KNOWLEDGE RELEASE</p>
+              <h2>商品知识入库与版本发布</h2>
+              <p class="muted">可上传单份手册或 Agent 整理好的商品资料包；平台统一执行解析、分块、图片绑定、索引、回归门禁和人工批准。发布失败不会改变当前生效版本。</p>
+            </div>
+            <span id="release-space" class="space-badge">未选择知识空间</span>
+          </div>
+
+          <ol class="release-steps" aria-label="发布流程">
+            <li id="step-upload" class="current"><span>1</span><strong>上传与解析</strong></li>
+            <li id="step-evaluate"><span>2</span><strong>入库质量检查</strong></li>
+            <li id="step-publish"><span>3</span><strong>批准发布</strong></li>
+          </ol>
+
+          <form id="ingestion-form" class="release-form">
+            <label>单文件产品 ID<input id="ingestion-product" placeholder="ZIP 资料包内已包含产品 ID"></label>
+            <label>手册或商品资料包<input id="ingestion-file" type="file" accept=".txt,.md,.pdf,.docx,.zip" required></label>
+            <button id="ingestion-submit" type="submit">上传并解析</button>
+          </form>
+
+          <div id="release-result" class="release-result" hidden>
+            <div class="release-summary">
+              <div><span>暂存包</span><strong id="staging-id">—</strong></div>
+              <div><span>文档</span><strong id="staging-document">—</strong></div>
+              <div><span>文本块</span><strong id="staging-chunks">—</strong></div>
+              <div><span>图片</span><strong id="staging-images">—</strong></div>
+            </div>
+
+            <div class="quality-card">
+              <div class="panel-head">
+                <div><p class="section-label">INGESTION QUALITY</p><h3>入库质量门禁</h3></div>
+                <strong id="quality-status" class="status-pending">等待检查</strong>
+              </div>
+              <div id="quality-metrics" class="metric-grid"></div>
+              <div id="quality-blockers" class="quality-message muted">解析完成后请执行入库质量检查。</div>
+            </div>
+
+            <div class="release-actions">
+              <button id="evaluate-button" type="button">执行入库质量检查</button>
+              <button id="diagnosis-button" class="ghost" type="button" disabled>诊断阻断项</button>
+              <label>知识回归用例 JSON
+                <input id="regression-file" type="file" accept=".json">
+              </label>
+              <button id="regression-button" class="ghost" type="button" disabled>运行版本回归</button>
+              <label>发布版本
+                <input id="publish-version" placeholder="例如 knowledge-v20260730" required>
+              </label>
+              <button id="publish-button" type="button" disabled>批准并发布</button>
+            </div>
+          </div>
+          <p id="release-status" class="operation-status" role="status">请先在上方知识空间列表中选择目标空间。</p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div><p class="section-label">TOKENS</p><h2>访问凭据</h2></div>
+            <button id="refresh-tokens" class="ghost">刷新</button>
+          </div>
+          <form id="token-form" class="inline-form">
+            <input id="token-user" placeholder="成员用户 ID" required>
+            <button type="submit">签发 Token</button>
+          </form>
+          <div id="issued-token" class="secret-once" hidden>
+            <strong>仅显示一次</strong>
+            <pre id="issued-token-value"></pre>
+          </div>
+          <div id="tokens" class="table-wrap"></div>
+        </article>
+
+        <article class="panel">
+          <div class="panel-head">
+            <div><p class="section-label">AUDIT</p><h2>审计事件</h2></div>
+            <button id="refresh-audit" class="ghost">刷新</button>
+          </div>
+          <div id="audit" class="table-wrap"></div>
+        </article>
+      </section>
+      <p id="workspace-error" class="error" role="alert"></p>
+    </div>
+  </main>
+  <script src="/control-ui/admin.js" defer></script>
+</body>
+</html>

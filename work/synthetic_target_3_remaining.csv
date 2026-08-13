@@ -1,0 +1,4 @@
+﻿id,question,category,source_manual,knowledge_point,novelty_reason,max_similarity_to_existing,risk_note,closest_existing_question
+2040,健身单车含有磁铁时，佩戴起搏器等医疗设备的人使用前需要注意什么？,cn_manual,健身单车手册,磁铁医疗设备风险,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.408,OK,"""启动健身单车前，我需要做什么？"""
+2138,What activities are not covered by the earphones' water resistance precautions?,en_manual,Earphones manual,water resistance limits,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.45,OK,"""What are the steps to power the camera?"""
+2140,How can I change font size or page display settings while reading on the eReader?,en_manual,eReader manual,font size setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.558,OK,How can I change the default energy-saving setting on the coffee machine?

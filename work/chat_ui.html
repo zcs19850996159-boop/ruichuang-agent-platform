@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>多模态客服智能体</title>
+  <style>
+    :root { color-scheme: light; --blue:#2563eb; --ink:#172033; --muted:#64748b; --line:#dbe3ef; --bg:#f4f7fb; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:var(--bg); }
+    main { max-width:1040px; margin:auto; padding:28px 18px 44px; }
+    h1 { margin:0 0 6px; font-size:28px; } h2 { margin:0 0 12px; font-size:20px; }
+    .sub,.meta { color:var(--muted); font-size:14px; }
+    .sub { margin:0 0 22px; }
+    .panel,.answer { background:#fff; border:1px solid var(--line); border-radius:12px; padding:18px; box-shadow:0 8px 28px rgba(15,23,42,.05); }
+    .answer { margin-top:18px; display:none; }
+    .row,.status-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+    label { display:block; margin:12px 0 6px; font-weight:650; }
+    input,textarea { width:100%; border:1px solid #cbd5e1; border-radius:8px; padding:10px 12px; font:inherit; background:#fff; }
+    textarea { min-height:118px; resize:vertical; }
+    button { border:0; border-radius:8px; padding:10px 16px; background:var(--blue); color:#fff; font-weight:700; cursor:pointer; }
+    button.secondary { background:#475569; } button.ghost { background:#e8eef8; color:#334155; }
+    button:disabled { opacity:.55; cursor:wait; }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-top:14px; }
+    .toggle { display:flex; align-items:center; gap:7px; margin:0 4px; font-weight:500; color:#475569; }
+    .toggle input { width:auto; }
+    .preview { display:flex; gap:10px; flex-wrap:wrap; margin-top:8px; }
+    .preview img { width:96px; height:96px; object-fit:contain; border:1px solid var(--line); border-radius:8px; background:#f8fafc; }
+    .result { margin-top:18px; white-space:pre-wrap; background:#0f172a; color:#e5e7eb; border-radius:10px; padding:16px; overflow:auto; min-height:110px; }
+    .answer-text { line-height:1.75; }
+    .status-grid { margin:16px 0; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); }
+    .status-card { padding:11px 12px; border:1px solid var(--line); border-radius:9px; background:#f8fafc; min-height:68px; }
+    .status-label { color:var(--muted); font-size:12px; margin-bottom:5px; }
+    .status-value { font-weight:700; overflow-wrap:anywhere; }
+    .badge { display:inline-block; padding:2px 8px; border-radius:999px; font-size:12px; font-weight:700; }
+    .good { color:#166534; background:#dcfce7; } .warn { color:#92400e; background:#fef3c7; } .bad { color:#991b1b; background:#fee2e2; }
+    .conflict { margin:12px 0; padding:11px 13px; border-left:4px solid #f59e0b; border-radius:7px; background:#fffbeb; color:#78350f; }
+    .vision { margin-top:10px; padding:11px; border:1px solid #e2e8f0; border-radius:8px; background:#f8fafc; color:#334155; }
+    .manual-figure { margin:14px 0 20px; padding:12px; border:1px solid var(--line); border-radius:10px; background:#f8fafc; }
+    .manual-figure img { display:block; max-width:100%; max-height:520px; object-fit:contain; margin:auto; border-radius:7px; background:#fff; cursor:zoom-in; }
+    .manual-figure figcaption { margin-top:8px; color:#475569; font-size:13px; text-align:center; }
+    .load-error { color:#b91c1c; }
+    .sources { margin-top:18px; border-top:1px solid var(--line); padding-top:14px; }
+    .source-title { font-weight:750; }
+    .source-card { margin-top:9px; padding:10px 12px; border-left:3px solid var(--blue); background:#f8fafc; font-size:13px; color:#334155; }
+    .feedback { margin-top:18px; padding-top:14px; border-top:1px solid var(--line); }
+    .feedback-row { display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+    .feedback input { flex:1; min-width:220px; }
+    .stream-cursor { display:inline-block; width:7px; height:1.05em; margin-left:3px; vertical-align:-2px; background:var(--blue); animation:blink .85s steps(1) infinite; }
+    @keyframes blink { 50% { opacity:0; } }
+    .modal { display:none; position:fixed; inset:0; z-index:50; background:rgba(2,6,23,.86); padding:24px; align-items:center; justify-content:center; }
+    .modal.open { display:flex; }
+    .modal-card { max-width:96vw; max-height:94vh; display:flex; flex-direction:column; align-items:center; gap:10px; }
+    .modal img { max-width:92vw; max-height:78vh; object-fit:contain; background:#fff; border-radius:8px; }
+    .modal-caption { color:#fff; }
+    .modal-actions { display:flex; gap:8px; }
+    a { color:var(--blue); text-decoration:none; }
+    @media(max-width:760px){ .row,.status-grid { grid-template-columns:1fr; } main{padding:18px 10px 34px;} }
+  </style>
+</head>
+<body>
+<main>
+  <h1>多模态客服智能体</h1>
+  <p class="sub">支持文本、截图和设备照片；回答中的手册插图、检索置信度与引用来源均可核验。</p>
+  <section class="panel">
+    <div class="row">
+      <div><label for="token">Bearer Token</label><input id="token" type="password" placeholder="直接填写 Token，不需要 Bearer 前缀"></div>
+      <div><label for="session">Session ID</label><input id="session"></div>
+    </div>
+    <div class="row">
+      <div><label for="requestId">X-Request-Id</label><input id="requestId"></div>
+      <div><label for="clientType">X-Client-Type</label><input id="clientType" value="web"></div>
+    </div>
+    <label for="file">上传图片（最多 3 张，每张不超过 5MB）</label>
+    <input id="file" type="file" accept="image/png,image/jpeg,image/webp" multiple>
+    <div id="preview" class="preview"></div>
+    <label for="question">问题</label>
+    <textarea id="question">空调遥控器没电了，按照手册应该怎样更换电池？</textarea>
+    <div class="actions">
+      <button id="send">发送</button>
+      <button id="newChat" class="secondary" type="button">新建聊天</button>
+      <span id="status" class="meta"></span>
+    </div>
+  </section>
+  <section id="answer" class="answer"></section>
+  <pre id="raw" class="result">等待请求...</pre>
+  <p class="meta"><a href="/docs">查看接口文档</a></p>
+</main>
+<div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="手册图片预览">
+  <div class="modal-card">
+    <img id="modalImage" alt="">
+    <div id="modalCaption" class="modal-caption"></div>
+    <div class="modal-actions"><button id="downloadImage">下载原图</button><button id="closeModal" class="secondary">关闭</button></div>
+  </div>
+</div>
+<script>
+  const $ = id => document.getElementById(id);
+  const send=$("send"), newChat=$("newChat"), statusEl=$("status"), raw=$("raw"), answerBox=$("answer");
+  const fileInput=$("file"), sessionInput=$("session"), requestIdInput=$("requestId"), preview=$("preview");
+  let uploadedImages=[], manualBlobUrls=[], manualBlobCache=new Map(), manualBlobPromises=new Map(), manualFetchControllers=new Set(), lastResponse=null, activeHeaders={}, activeImageId="";
+  const escapeHtml = text => String(text ?? "").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
+  function makeId(prefix){ const b=new Uint32Array(2); crypto.getRandomValues(b); return prefix+Date.now().toString(36)+"-"+Array.from(b,x=>x.toString(36)).join("-"); }
+  function revokeBlobs(){ manualFetchControllers.forEach(controller=>controller.abort()); manualFetchControllers.clear(); manualBlobUrls.forEach(URL.revokeObjectURL); manualBlobUrls=[]; manualBlobCache.clear(); manualBlobPromises.clear(); }
+  function resetChat(){
+    revokeBlobs(); uploadedImages=[]; lastResponse=null; fileInput.value=""; preview.innerHTML="";
+    sessionInput.value=makeId("kf_session_"); requestIdInput.value=makeId("kf_req_");
+    answerBox.style.display="none"; answerBox.innerHTML=""; raw.textContent="已新建聊天，等待请求..."; statusEl.textContent="新会话";
+  }
+  function answerHtmlWithFigures(answer,imageIds){
+    const parts=String(answer||"").split("<PIC>"); let html="<h2>回答</h2><div class='answer-text'>";
+    parts.forEach((part,index)=>{
+      if(part.trim()) html+="<div>"+escapeHtml(part).replaceAll("\n","<br>")+"</div>";
+      if(index<imageIds.length) html+=figureHtml(imageIds[index]);
+    });
+    for(let i=Math.max(0,parts.length-1);i<imageIds.length;i++) html+=figureHtml(imageIds[i]);
+    return html+"</div>";
+  }
+  function streamingAnswerHtml(answer,imageIds){
+    const visible=String(answer||"").replace(/<(?:P(?:I(?:C)?)?)?$/,""), parts=visible.split("<PIC>"); let html="<h2>回答</h2><div class='answer-text'>";
+    parts.forEach((part,index)=>{
+      if(part)html+="<div>"+escapeHtml(part).replaceAll("\n","<br>")+"</div>";
+      if(index<parts.length-1){
+        const imageId=String(imageIds[index]||"");
+        html+=imageId?figureHtml(imageId,true):"<div class='vision'>正在定位对应手册图片…</div>";
+      }
+    });
+    return html+"<span class='stream-cursor'></span></div><div class='meta'>答案正在实时生成，图片会在对应步骤处同步出现…</div>";
+  }
+  function figureHtml(imageId,pending=false){
+    const label=pending?"答案完成后加载手册图片…":"正在加载手册图片…";
+    return "<figure class='manual-figure' data-image-id='"+escapeHtml(imageId)+"'><div class='meta'>"+label+"</div><figcaption>"+escapeHtml(imageId)+" · 点击图片放大</figcaption></figure>";
+  }
+  function score(value){ const n=Number(value); return Number.isFinite(n)?n.toFixed(3):"—"; }
+  function confidenceHtml(d){
+    const route=d.route||{}, retrieval=d.retrieval||{}, vision=d.input_images||{}, structured=vision.structured||{}, conflict=vision.route_conflict||{}, visual=vision.manual_image_matches||{};
+    const routeConfidence=(d.selector||{}).confidence||{};
+    const decision=String(retrieval.decision||"未提供");
+    const decisionClass=decision==="evidence_sufficient"||decision==="pass"?"good":decision==="evidence_insufficient"?"bad":"warn";
+    let html="<div class='status-grid'>"+
+      "<div class='status-card'><div class='status-label'>问题路由</div><div class='status-value'>"+escapeHtml(route.route_type||"—")+" · "+escapeHtml(route.manual_id||route.product||"未指定产品")+"</div><span class='badge "+(Number(routeConfidence.score)>=.6?"good":"warn")+"'>"+score(routeConfidence.score)+"</span></div>"+
+      "<div class='status-card'><div class='status-label'>知识检索</div><div class='status-value'>"+escapeHtml(retrieval.mode||"hybrid")+" · "+escapeHtml(decision)+"</div><span class='badge "+decisionClass+"'>rerank "+score(retrieval.top_rerank_score)+" / gap "+score(retrieval.top_score_gap)+"</span></div>"+
+      "<div class='status-card'><div class='status-label'>图片理解</div><div class='status-value'>"+(vision.received?escapeHtml(vision.received)+" 张，"+(vision.used?"已参与":"未采用"):"未上传图片")+"</div><span class='badge "+(Number(structured.vision_confidence)>=.65?"good":vision.received?"warn":"good")+"'>视觉 "+score(structured.vision_confidence)+" / OCR "+score(structured.ocr_confidence)+"</span></div>"+
+      "<div class='status-card'><div class='status-label'>手册图片匹配</div><div class='status-value'>"+escapeHtml((visual.matches||[])[0]?.image_id||(!vision.received?"未上传图片":visual.used?"未命中":"向量索引未启用"))+"</div><span class='badge "+(visual.accepted?"good":vision.received?"warn":"good")+"'>相似度 "+score(visual.top_score)+" / 分差 "+score(visual.top_gap)+"</span></div>"+
+      "</div>";
+    if(Object.keys(conflict).length) html+="<div class='conflict'><strong>检测到图文/产品路由冲突：</strong>"+escapeHtml(conflict.message||conflict.reason||JSON.stringify(conflict))+"。建议核对产品型号或重新上传清晰图片。</div>";
+    if(d.refusal_type) html+="<div class='conflict'><strong>当前未直接作答：</strong>"+escapeHtml(d.refusal_type)+"</div>";
+    return html;
+  }
+  function sourcesHtml(sources){
+    const unique=[], seen=new Set();
+    for(const s of Array.isArray(sources)?sources:[]){ const key=[s.manual_id,s.chunk_id,(s.image_ids||[]).join(",")].join("|"); if(seen.has(key))continue; seen.add(key); unique.push(s); if(unique.length>=6)break; }
+    if(!unique.length)return "";
+    return "<div class='sources'><div class='source-title'>引用来源</div>"+unique.map(s=>{
+      const label=[s.manual_id,s.product,s.section_title].filter(Boolean).join(" · ")||s.source_type||"知识库证据";
+      return "<div class='source-card'><div class='source-title'>"+escapeHtml(label)+"</div>"+
+        (s.chunk_id?"<div>Chunk："+escapeHtml(s.chunk_id)+"</div>":"")+
+        ((s.image_ids||[]).length?"<div>图片："+escapeHtml(s.image_ids.join(", "))+"</div>":"")+
+        (s.evidence_snippet?"<div>"+escapeHtml(String(s.evidence_snippet).slice(0,260))+"</div>":"")+"</div>";
+    }).join("")+"</div>";
+  }
+  function feedbackHtml(){ return "<div class='feedback'><div class='source-title'>这个回答有帮助吗？</div><div class='feedback-row'><button class='ghost feedback-btn' data-rating='up'>👍 有帮助</button><button class='ghost feedback-btn' data-rating='down'>👎 没帮助</button><input id='feedbackComment' maxlength='1000' placeholder='可选：告诉我们哪里需要改进'><span id='feedbackStatus' class='meta'></span></div></div>"; }
+  function markFigureError(figure,error){
+    if(!figure?.isConnected)return; const el=figure.firstElementChild;
+    if(el){el.className="load-error";el.textContent="图片加载失败，请稍后重试（"+String(error)+"）";}
+  }
+  function attachManualImage(figure,url,imageId){
+    return new Promise((resolve,reject)=>{
+      const img=document.createElement("img"); let settled=false;
+      const finish=(error)=>{if(settled)return;settled=true;clearTimeout(timer);error?reject(error):resolve();};
+      const timer=setTimeout(()=>finish(new Error("图片解码超时")),10000);
+      img.alt=imageId; img.addEventListener("load",()=>{
+        if(figure.isConnected){figure.firstElementChild?.remove();figure.insertBefore(img,figure.firstElementChild);}
+        finish();
+      },{once:true});
+      img.addEventListener("error",()=>finish(new Error("图片格式或内容不可用")),{once:true});
+      img.addEventListener("click",()=>openModal(url,imageId)); img.src=url;
+    });
+  }
+  function getManualImageUrl(imageId,headers){
+    if(manualBlobCache.has(imageId))return Promise.resolve(manualBlobCache.get(imageId));
+    if(manualBlobPromises.has(imageId))return manualBlobPromises.get(imageId);
+    const controller=new AbortController(); manualFetchControllers.add(controller);
+    const timer=setTimeout(()=>controller.abort(),12000);
+    const promise=fetch("/manual-images/"+encodeURIComponent(imageId),{headers,signal:controller.signal}).then(async response=>{
+      if(!response.ok)throw new Error("HTTP "+response.status);
+      const blob=await response.blob();
+      if(!blob.size)throw new Error("图片内容为空");
+      if(blob.type&&!blob.type.startsWith("image/"))throw new Error("返回内容不是图片");
+      const url=URL.createObjectURL(blob); manualBlobUrls.push(url); manualBlobCache.set(imageId,url); return url;
+    }).catch(error=>{if(error?.name==="AbortError")throw new Error("请求超时");throw error;}).finally(()=>{
+      clearTimeout(timer);manualFetchControllers.delete(controller);manualBlobPromises.delete(imageId);
+    });
+    manualBlobPromises.set(imageId,promise); return promise;
+  }
+  async function loadManualFigures(headers){
+    for(const figure of answerBox.querySelectorAll(".manual-figure[data-image-id]")){
+      const imageId=figure.dataset.imageId||"";
+      try{
+        const cached=manualBlobCache.get(imageId);
+        if(cached){await attachManualImage(figure,cached,imageId);continue;}
+        const url=await getManualImageUrl(imageId,headers);
+        if(figure.isConnected)await attachManualImage(figure,url,imageId);
+      }catch(error){markFigureError(figure,error);}
+    }
+  }
+  function openModal(url,id){ activeImageId=id; $("modalImage").src=url; $("modalImage").alt=id; $("modalCaption").textContent=id; $("imageModal").classList.add("open"); }
+  function closeModal(){ $("imageModal").classList.remove("open"); }
+  async function downloadActiveImage(){
+    if(!activeImageId)return;
+    const response=await fetch("/manual-images/"+encodeURIComponent(activeImageId),{headers:activeHeaders}); if(!response.ok)throw new Error("下载失败 HTTP "+response.status);
+    const url=URL.createObjectURL(await response.blob()), a=document.createElement("a"); a.href=url; a.download=activeImageId+".png"; a.click(); setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  function renderResponse(data,headers){
+    raw.textContent=JSON.stringify(data,null,2);
+    if(data.code!==0||!data.data){ answerBox.style.display="block"; answerBox.innerHTML="<div class='load-error'>"+escapeHtml(data.msg||"请求失败")+"</div>"; return; }
+    lastResponse=data.data; activeHeaders=headers; const d=data.data, vision=d.input_images||{};
+    answerBox.style.display="block";
+    answerBox.innerHTML=answerHtmlWithFigures(d.answer,d.images||[])+confidenceHtml(d)+
+      (vision.context?"<div class='vision'><strong>图片识别摘要：</strong>"+escapeHtml(vision.context)+"</div>":"")+
+      "<div class='meta'>Session："+escapeHtml(d.session_id||"")+"；Request："+escapeHtml(d.request_id||"")+"；耗时："+escapeHtml(d.elapsed_ms??"—")+" ms</div>"+
+      sourcesHtml(d.sources||[])+feedbackHtml();
+    answerBox.querySelectorAll(".feedback-btn").forEach(btn=>btn.addEventListener("click",()=>submitFeedback(btn.dataset.rating)));
+    loadManualFigures(headers);
+  }
+  async function submitFeedback(rating){
+    if(!lastResponse)return; const feedbackStatus=$("feedbackStatus"); feedbackStatus.textContent="提交中…";
+    const payload={rating,comment:$("feedbackComment")?.value||"",request_id:lastResponse.request_id,session_id:lastResponse.session_id,manual_id:(lastResponse.route||{}).manual_id,route_type:(lastResponse.route||{}).route_type};
+    try{ const r=await fetch("/feedback",{method:"POST",headers:activeHeaders,body:JSON.stringify(payload)}), d=await r.json(); if(!r.ok||d.code!==0)throw new Error(d.msg||"提交失败"); feedbackStatus.textContent="感谢反馈，已记录"; answerBox.querySelectorAll(".feedback-btn").forEach(b=>b.disabled=true); }
+    catch(e){ feedbackStatus.textContent=String(e); }
+  }
+  function readFileAsDataUrl(file){ return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result||""));reader.onerror=()=>reject(reader.error||new Error("读取失败"));reader.readAsDataURL(file);}); }
+  async function postStream(body,headers){
+    const response=await fetch("/chat/stream",{method:"POST",headers,body:JSON.stringify(body)}); if(!response.ok)throw new Error("HTTP "+response.status);
+    const reader=response.body.getReader(), decoder=new TextDecoder(); let buffer="", streamed="", finalData=null, streamImageIds=[];
+    while(true){
+      const {value,done}=await reader.read(); buffer+=decoder.decode(value||new Uint8Array(),{stream:!done});
+      const blocks=buffer.split("\n\n"); buffer=blocks.pop()||"";
+      for(const block of blocks){
+        let event="message", dataText=""; for(const line of block.split("\n")){if(line.startsWith("event:"))event=line.slice(6).trim();if(line.startsWith("data:"))dataText+=line.slice(5).trim();}
+        if(!dataText)continue; const payload=JSON.parse(dataText);
+        if(event==="status"){
+          const labels={accepted:"请求已接收…",understanding_and_retrieval:"正在理解问题、识别图片并检索知识库…",model_generating:"模型正在实时生成答案…",validating_answer:"正在校验答案与证据…"};
+          statusEl.textContent=labels[payload.stage]||"处理中…";
+        }
+        else if(event==="answer_metadata"){
+          streamImageIds=Array.isArray(payload.images)?payload.images:[];
+          statusEl.textContent=streamImageIds.length?"已找到 "+streamImageIds.length+" 张相关手册图片，正在生成图文答案…":"检索完成，正在生成答案…";
+        }
+        else if(event==="answer_reset"){ streamed=""; answerBox.style.display="block"; answerBox.innerHTML="<h2>回答</h2><div class='meta'>初稿未通过校验，正在重新生成…</div>"; }
+        else if(event==="answer_delta"){ streamed+=payload.text||""; answerBox.style.display="block"; answerBox.innerHTML=streamingAnswerHtml(streamed,streamImageIds); }
+        else if(event==="final"){ finalData=payload; }
+        else if(event==="error")throw new Error(payload.msg||"流式请求失败");
+      }
+      if(done)break;
+    }
+    if(!finalData)throw new Error("流式连接结束但未收到最终结果"); return finalData;
+  }
+  fileInput.addEventListener("change",async()=>{
+    uploadedImages=[]; preview.innerHTML=""; const files=Array.from(fileInput.files||[]).slice(0,3);
+    for(const file of files){const data=await readFileAsDataUrl(file);uploadedImages.push(data);const img=document.createElement("img");img.src=data;img.alt=file.name;preview.appendChild(img);}
+    if((fileInput.files||[]).length>3)statusEl.textContent="只会发送前 3 张图片";
+  });
+  newChat.addEventListener("click",resetChat);
+  $("closeModal").addEventListener("click",closeModal); $("imageModal").addEventListener("click",e=>{if(e.target===$("imageModal"))closeModal();});
+  $("downloadImage").addEventListener("click",()=>downloadActiveImage().catch(e=>$("modalCaption").textContent=String(e)));
+  document.addEventListener("keydown",e=>{if(e.key==="Escape")closeModal();});
+  send.addEventListener("click",async()=>{
+    const token=$("token").value.trim(), body={question:$("question").value.trim(),images:uploadedImages,session_id:sessionInput.value.trim()||makeId("kf_session_"),stream:false};
+    sessionInput.value=body.session_id;
+    const headers={"Content-Type":"application/json; charset=utf-8","X-Request-Id":requestIdInput.value.trim()||makeId("kf_req_"),"X-Client-Type":$("clientType").value.trim()||"web"};
+    if(token)headers.Authorization=token.toLowerCase().startsWith("bearer ")?token:"Bearer "+token;
+    send.disabled=true;newChat.disabled=true;statusEl.textContent="正在发送…";answerBox.style.display="none";raw.textContent="请求中…";
+    try{
+      const data=await postStream(body,headers);
+      renderResponse(data,headers); statusEl.textContent=data.code===0?"完成":"请求失败";
+    }catch(e){raw.textContent=String(e);statusEl.textContent="请求异常";answerBox.style.display="block";answerBox.innerHTML="<div class='load-error'>"+escapeHtml(e)+"</div>";}
+    finally{send.disabled=false;newChat.disabled=false;}
+  });
+  resetChat();
+</script>
+</body>
+</html>

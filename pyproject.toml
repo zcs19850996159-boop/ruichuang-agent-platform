@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ruichuang-multimodal-customer-agent"
+version = "3.5.1"
+description = "Tenant-aware enterprise control plane for the multimodal customer-service core"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "fastapi>=0.110,<1",
+  "uvicorn>=0.29,<1",
+  "redis>=5,<7",
+  "numpy>=1.26,<3",
+  "openpyxl>=3.1,<4",
+  "pypdf>=6.14,<7",
+  "PyMuPDF>=1.28,<2",
+  "requests>=2.31,<3",
+  "boto3>=1.35,<2",
+  "psycopg[binary]>=3.2,<4",
+  "psycopg-pool>=3.2,<4",
+  "torch>=2.2",
+  "transformers>=4.40,<5",
+]
+
+[tool.setuptools]
+py-modules = []
+
+[tool.ruichuang]
+application-version = "3.5.1"
+default-profile = "competition"
+default-knowledge-version = "competition-kb-v1"

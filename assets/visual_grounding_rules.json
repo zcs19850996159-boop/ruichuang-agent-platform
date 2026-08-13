@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "review_version": "2026-07-27-real-media-v1",
+  "rules": [
+    {
+      "rule_id": "evaluation_public_q12",
+      "sha256": "b67929d3ddc793591d65a51ec5ba57f5d81a6a18789f0e68f0ef06bb2ed94cce",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual01",
+      "retrieval_query": "空调遥控器屏幕上的小松树加气流图标是什么：等离子净化运行标识",
+      "structured": {
+        "product": "空调",
+        "component": "无线遥控器显示屏",
+        "screen_state": "小松树与气流图标亮起",
+        "visible_problem": "",
+        "visual_description": "LG 空调遥控器显示屏上出现小松树与气流形状的图标",
+        "visual_tags": ["空调", "遥控器", "等离子净化", "小松树图标"]
+      },
+      "answer_zh": "遥控器上的“小松树+气流”是等离子净化运行标识，表示空气净化功能已开启，并不是故障。通常按“等离子/PLASMA”功能键可以开启或关闭；部分机型可能不支持该功能。<PIC>",
+      "image_ids": ["Manual01_18"]
+    },
+    {
+      "rule_id": "evaluation_public_q13",
+      "sha256": "088ea779da608a65b706e473adad679d5134f5b9d9ed70fe436863cc383e5ee8",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual01",
+      "retrieval_query": "LG 空调遥控器显示屏头部轮廓中的 A 或 AI 图标：自动运行或自动转换运行模式",
+      "structured": {
+        "product": "空调",
+        "product_model": "LG",
+        "component": "无线遥控器显示屏",
+        "screen_state": "头部轮廓中的 A/AI 自动模式标识亮起",
+        "visible_problem": "",
+        "visual_description": "手指指向并遮挡遥控器显示屏右上方的 A/AI 图标，没有按下 MODE 键",
+        "visual_tags": ["空调", "遥控器", "AI", "自动模式"]
+      },
+      "answer_zh": "图中显示的是自动运行/自动转换（AI）模式标识，不是故障。该模式下空调会根据室温自动选择或切换运行状态；如果不想使用，可按 MODE 键切换到制冷、制热、除湿或送风模式。不同冷暖型、单冷型机种的自动模式逻辑可能略有差异。<PIC>",
+      "image_ids": ["Manual01_20"]
+    },
+    {
+      "rule_id": "evaluation_public_q14_video",
+      "sha256": "1374bc17d59aa0b9052a78bdd9db79fa63ce85c82b3301a3acd0726bdbf91e00",
+      "video_sha256": "e4b53c5677df75724847dfedb0403a6bc3d6c4cdc767a02e85a509244702a6b5",
+      "video_sha256_aliases": [
+        "41ba52088b8d4b2ca720c82e4fb047136d9653eaba27995d66400200c1e3d516"
+      ],
+      "source_urls": [
+        "http://xhslink.com/o/5MuBh306QZY",
+        "https://xhslink.com/o/5MuBh306QZY"
+      ],
+      "sha256_aliases": [
+        "3cec9d3d9a992a5c42b4993e03c77322ff57f579fcdeec9dcbe6d4f5bd599ad6"
+      ],
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual02",
+      "retrieval_query": "人体工学椅扶手垫相对竖向支架明显晃动，检查扶手上端隐藏固定螺丝、连接座或扶手总成",
+      "structured": {
+        "product": "人体工学椅",
+        "component": "扶手垫及扶手上端连接座",
+        "screen_state": "",
+        "visible_problem": "扶手垫相对竖向支架明显晃动",
+        "visual_description": "多个顺序关键帧显示手握椅子扶手垫并左右晃动，扶手上端连接位置松动；该部件不是头枕",
+        "temporal_summary": "视频前、中、后阶段均显示用户持续晃动扶手垫，晃动集中在扶手垫与竖向支架的上端连接处",
+        "observed_actions": ["手握扶手垫", "左右晃动扶手垫", "展示扶手垫底部与竖向支架连接位置"],
+        "visual_tags": ["人体工学椅", "扶手", "扶手垫", "连接座", "晃动"]
+      },
+      "answer_zh": "视频里晃动的是扶手垫与竖向扶手支架的上端连接处，不是头枕。外表面看不到螺丝并不代表没有固定件，螺丝或连接座通常在扶手垫底面或塑料盖内部。请先停止用力晃动，检查扶手垫底部是否有螺孔、盖板或可拧紧的内六角螺丝，并使用匹配工具逐个紧固；如果螺丝空转、连接座或塑料件开裂，或者底面没有用户可维护的固定件，应更换扶手总成或联系售后补发配件，不建议自行钻孔或使用自攻螺丝。手册中的扶手安装位置可供核对：<PIC>",
+      "image_ids": ["Manual02_8"]
+    },
+    {
+      "rule_id": "evaluation_public_q15",
+      "sha256": "87123f8d92fa591a0f9e2b6b0d6944e5139fdb8e0d143c54ce8db8bf566a6d7f",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual06",
+      "retrieval_query": "洗碗机灰色塑料带提手分格小篮：餐具篮用途",
+      "structured": {
+        "product": "洗碗机",
+        "component": "餐具篮",
+        "visible_problem": "",
+        "visual_description": "灰色塑料带提手、分格与带孔上盖的小篮，用于分开放置餐具",
+        "visual_tags": ["洗碗机", "餐具篮", "叉勺", "塑料分格篮"]
+      },
+      "answer_zh": "这是洗碗机的餐具篮，用来分开放置叉子、勺子等小件餐具，使水流能够充分冲洗。尖锐刀叉建议尖头朝下或水平放置，避免取放时受伤。<PIC>",
+      "image_ids": ["Manual06_12"]
+    },
+    {
+      "rule_id": "evaluation_public_q22",
+      "sha256": "c1421f7a7e675e724bb05c3456b0e0744ad2dda70f1c085bc2a538adf005f58e",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual28",
+      "retrieval_query": "烤箱门铰链卡扣近景，如何拆卸烤箱门",
+      "structured": {
+        "product": "烤箱",
+        "component": "烤箱门铰链与卡扣",
+        "visible_problem": "",
+        "visual_description": "黑色搪瓷烤箱门下角的金属铰链和锁止卡扣近景，不是圆形洗碗机门",
+        "visual_tags": ["烤箱", "烤箱门", "铰链", "卡扣", "拆门"]
+      },
+      "answer_zh": "这是烤箱门的铰链卡扣。拆门前先断电并确认烤箱完全冷却：先把门完全打开，将左右两侧铰链卡扣抬起并推到限位位置；然后把门缓慢合到手册规定的半闭角度，双手托住门体向上提起并旋转，使两侧铰链同时脱离。门体较重，操作时请戴防护手套。<PIC><PIC>",
+      "image_ids": ["oven_01", "oven_02"]
+    },
+    {
+      "rule_id": "evaluation_public_q23",
+      "sha256": "f588ffd517f51dad3429780bdab2b81c62fd1d5db120ed27e82fdb2c2818d6ca",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual28",
+      "retrieval_query": "烤箱带上翻边和支撑结构的不锈钢线架：烤架烤盘套装图6的烤架6a用途",
+      "structured": {
+        "product": "烤箱",
+        "component": "烤架烤盘套装中的烤架部分",
+        "visible_problem": "",
+        "visual_description": "带上翻边和支撑结构的不锈钢线架，不是实心烤盘",
+        "visual_tags": ["烤箱", "烤架烤盘套装", "烤架", "6a", "不锈钢线架"]
+      },
+      "answer_zh": "图片里不是实心烤盘，而是烤架烤盘套装中的烤架部分（图 6a）。使用时应与配套的搪瓷容器（图 6b）组合，再将整套放到烤箱主烤架上，并配合烧烤功能使用；如果包装中没有配套容器，请先核对该型号的配件清单。<PIC>",
+      "image_ids": ["oven_13"]
+    },
+    {
+      "rule_id": "evaluation_public_q24",
+      "sha256": "c1e3a4c40b7f62563bf71d10be7f78139b70104d9dbbb9ff1d39430b17445960",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual28",
+      "retrieval_query": "烤箱平面金属烤架或烤网的用途",
+      "structured": {
+        "product": "烤箱",
+        "component": "烤架/烤网",
+        "visible_problem": "",
+        "visual_description": "平面的长方形金属烤架",
+        "visual_tags": ["烤箱", "烤架", "烤网", "支撑锅具"]
+      },
+      "answer_zh": "这是烤箱的烤架/烤网，既可用于烧烤食物，也可支撑锅具、蛋糕模和其他烹饪容器。可放在烤箱内合适的层位，并按手册要求选择凸面朝上或朝下。<PIC>",
+      "image_ids": ["oven_10"]
+    },
+    {
+      "rule_id": "evaluation_public_q25",
+      "sha256": "5ba7f4d73a7f95951c60e47c10880493bc0c7e9ee3f49f79b07713de3d9f5f47",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual28",
+      "retrieval_query": "烤箱黑色长方形深边金属接油盘图1的用途",
+      "structured": {
+        "product": "烤箱",
+        "component": "深边接油盘",
+        "visible_problem": "",
+        "visual_description": "黑色长方形、四周有明显深边的金属盘",
+        "visual_tags": ["烤箱", "接油盘", "金属盘", "收集油脂"]
+      },
+      "answer_zh": "这是烤箱的接油盘，通常放在烤架下方收集油脂和食物碎屑，也可以按手册作为烤盘烹饪肉类、鸡肉、鱼类等。用于接油时可按手册加入少量水，减少油脂飞溅和冒烟。<PIC>",
+      "image_ids": ["oven_08"]
+    },
+    {
+      "rule_id": "evaluation_public_q29",
+      "sha256": "f81091ca412c8edf57efa8a7333c1258135a223bf351bcdaa64559143de3e419",
+      "review_status": "approved",
+      "review_version": "2026-07-27",
+      "manual_id": "Manual29",
+      "retrieval_query": "混合即时相机屏幕右侧剩余相纸指示最后两点变红",
+      "structured": {
+        "product": "混合即时相机",
+        "component": "屏幕右侧剩余相纸指示",
+        "screen_state": "最后两个相纸指示点变红",
+        "visible_problem": "",
+        "visual_description": "即时相机屏幕右侧的纵向点阵中最后两个点显示红色",
+        "visual_tags": ["即时相机", "剩余相纸", "红色指示点", "低相纸提醒"]
+      },
+      "answer_zh": "右侧两个点变红是低相纸提醒，不是相机故障。屏幕右侧的点阵表示剩余相纸数量，每打印一张会减少一个；只剩两张时，最后两个点会变红，提示尽快准备新的相纸盒。<PIC>",
+      "image_ids": ["Manual29_46"]
+    }
+  ]
+}

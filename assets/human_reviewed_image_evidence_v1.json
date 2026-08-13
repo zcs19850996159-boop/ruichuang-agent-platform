@@ -1,0 +1,311 @@
+{
+  "version": "human-reviewed-image-evidence-v1",
+  "human_approval_required": true,
+  "images": {
+    "Manual14_39": {
+      "manual_id": "Manual14",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "E2：检查数据线完整性；检查数据线连接和方向，连接器卡扣应对齐并卡入；若控制台电子部件仍异常，联系当地经销商。"
+    },
+    "Manual10_235": {
+      "manual_id": "Manual10",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "Err01：镜头通信异常，清洁镜头触点；Err02：CF卡问题，重插、格式化或更换；Err04：存储卡已满，删除内容或更换卡；Err05：闪光灯弹出受阻，将开关置于ON；Err99：其他错误，重新安装电池，非原厂镜头也可能导致。"
+    },
+    "Manual23_18": {
+      "manual_id": "Manual23",
+      "review_status": "human_reviewed_approved",
+      "evidence": "Manual23 的产品品类是割草机（Lawn Mower）。139-6699 是割草高度（Height of cut）标贴；图中 1～5 和 1/4、1/2、3/4 是割草高度档位刻度。本图不表示燃油、加油、机油、空调或错误码；现有证据不足以进一步声称具体割草机型号。"
+    },
+    "Manual17_5": {
+      "manual_id": "Manual17",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "请勿拉扯电源线或用湿手触碰电源插头，可能引发触电或伤害；拉扯线缆还可能损坏线缆并引发火灾。"
+    },
+    "Manual09_143": {
+      "manual_id": "Manual09",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "湿储物舱位于游泳平台下方。打开：向上拉起锁扣手柄，顺时针转动，再打开后平台舱盖。关闭：关闭后平台舱盖，逆时针转动锁扣手柄并确认牢固关闭，再向下按锁扣手柄。舱盖未牢固关闭时发动机不会启动。"
+    },
+    "Manual09_144": {
+      "manual_id": "Manual09",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "湿储物舱位于游泳平台下方。打开：向上拉起锁扣手柄，顺时针转动，再打开后平台舱盖。关闭：关闭后平台舱盖，逆时针转动锁扣手柄并确认牢固关闭，再向下按锁扣手柄。舱盖未牢固关闭时发动机不会启动。"
+    },
+    "Manual35_23": {
+      "manual_id": "Manual35",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "CH. 菜单包含 Auto prog.、Manual 和 Favorite；选择 Auto prog. 后开始搜索并存储可接收频道。"
+    },
+    "Manual25_93": {
+      "manual_id": "Manual25",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "插入至少 8 GB 的 USB 存储设备；设备未显示时点击 Refresh；选择设备后点击 Next；创建启动盘会清除并格式化设备，必须先备份重要内容。"
+    },
+    "Manual30_33": {
+      "manual_id": "Manual30",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "把蒸汽释放阀放在释放管上并用力按下。正确安装时阀门会松动地坐在管上，但锅盖倒置时仍应保持在位；使用前必须安装。"
+    },
+    "Manual35_38": {
+      "manual_id": "Manual35",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "按 MENU 进入 Special，选择 Caption，再选择 Off、Mode1、Mode2、Text1 或 Text2；重复按 MENU 退出。电视会记住上次选择的模式。"
+    },
+    "air_fryer_16": {
+      "manual_id": "Manual08",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "空气炸锅操作：按 Menu 直到所需预设图标闪烁，再按 On/off 开始烹饪；180 是温度显示。"
+    },
+    "Manual25_94": {
+      "manual_id": "Manual25",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "ISO 流程：选择 Windows 7 OS disc to ISO file 并点击 Next；勾选 I agree 后点击 Next；选择 Windows 7 安装盘来源并点击 Next；选择保存修改后 ISO 文件的文件夹并点击 Next；完成后点击 OK；将 ISO 刻录到空白 DVD 可创建修改后的安装 DVD。不要混入 USB 启动盘格式化步骤。"
+    },
+    "toothbrush0_11": {
+      "manual_id": "Manual37",
+      "review_status": "human_reviewed_approved",
+      "evidence": "该放大图中的电池形符号表示电池指示灯的功能启停确认反馈，不是刷头更换提醒图标。电池指示灯白色闪烁 3 次并伴随 3 个由低到高的提示音，表示所选功能已启用；琥珀色闪烁 3 次并伴随 3 个由高到低的提示音，表示已停用。紫色灯环属于压力传感反馈：启停压力传感反馈时，SenseIQ 指示灯和灯环会亮紫色 3 秒；它与本图的电池指示灯反馈不是同一状态。"
+    },
+    "Manual07_19": {
+      "manual_id": "Manual07",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "咖啡机两个杯量按钮的灯闪烁表示正在预热，预热约需 25 秒；灯保持常亮表示机器已准备好。该图不是除垢操作。"
+    },
+    "Manual35_26": {
+      "manual_id": "Manual35",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "屏幕显示 Magic eye off，表示 Magic Eye 自动图像感应功能已关闭。可使用 APC 按钮切换预设图像模式；不要把 off 解释为电视故障。"
+    },
+    "Manual08_15": {
+      "manual_id": "Manual08",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "空气炸锅屏幕显示 27，并突出 On/off（启动/暂停）按钮。选择好程序和参数后，按 On/off 开始烹饪；烹饪中可用该按钮暂停或继续。"
+    },
+    "Manual30_10": {
+      "manual_id": "Manual30",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是多功能压力锅与空气炸锅的控制面板说明表：左侧为 Smart Programs；显示区显示时间、压力等级或温度；-/+ Temp 调温，-/+ Time 调时，Keep Warm 控制保温，Delay Start 设置延时，Start 启动，Cancel 停止。不要改答锅盖拆装。"
+    },
+    "Manual28_0": {
+      "manual_id": "Manual28",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片展示烤箱正面控制区域。控制面板通常包括功能选择旋钮、电子程序器、温度旋钮和温控指示灯；选择功能和温度后开始加热，完成后将旋钮归零。"
+    },
+    "Manual18_27": {
+      "manual_id": "Manual18",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是发电机油箱盖通气旋钮的 ON/OFF 位置示意。使用发动机前按箭头将通气旋钮从拧紧位置逆时针转到 ON，使燃油流向化油器；停用时顺时针拧紧到 OFF，切断燃油供给。该图不是发动机机油加注。"
+    },
+    "drill0_17": {
+      "manual_id": "Manual11",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片是冲击钻孔模式设置：将扭矩调节环 C 转到冲击钻符号，并选择适合作业的速度/扭矩范围；仅使用额定用于冲击钻孔的硬质合金或砌体钻头。该图不是电池安装。"
+    },
+    "Manual22_30": {
+      "manual_id": "Manual22",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片是无线话机待机屏幕图标说明表。电池条表示电池电量或充电状态，信号条表示话机与基座之间的连接强度；应按图标逐项解释，不要改答安装安全说明。"
+    },
+    "Manual33_11": {
+      "manual_id": "Manual33",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "吊顶 T 型轨安装：按安装板模板设置夹子间距；拧紧 T 型轨夹的定位螺钉，并使用 5/64 英寸（2 mm）内六角扳手固定；再将安装板与夹子连接并卡入 T 型轨。"
+    },
+    "Manual34_157": {
+      "manual_id": "Manual34",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是化油器 Pilot screw（怠速混合比螺钉）调整表：向内旋会使混合气更稀，适用于较暖天气或较高海拔；向外旋会使混合气更浓，适用于较冷天气或较低海拔。不要改答主喷油嘴拆装步骤。"
+    },
+    "Manual34_162": {
+      "manual_id": "Manual34",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是化油器 Main jet（主喷油嘴）选择表：较小编号使混合气更稀，适用于较暖天气或较高海拔；较大编号使混合气更浓，适用于较冷天气或较低海拔。"
+    },
+    "Manual20_88": {
+      "manual_id": "Manual20",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "摩托艇不得在水深不足 60 cm（2 ft）的水域启动发动机。应把艇放入足够深的水中，再从侧面或后方登艇，以免吸入杂物并损坏喷射泵。"
+    },
+    "Manual29_25": {
+      "manual_id": "Manual29",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是混合即时相机左右快门按钮的功能组合表。可为右、左快门按钮分配快门、拍摄模式切换或 OFF 等组合；在设置界面选择组合后确认。"
+    },
+    "Manual01_11": {
+      "manual_id": "Manual01",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是空调风扇转速图标表，档位依次为 High、Medium-High、Medium、Medium-Low、Low 和 Natural Wind。操作时使用风速键循环选择所需档位。不要改答遥控器电池安装。"
+    },
+    "Manual31_22": {
+      "manual_id": "Manual31",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "标准火花塞为 BPR4ES（NGK），火花塞电极间隙为 0.7–0.8 mm（0.028–0.031 in）。检查时清除积碳、测量间隙并按规格调整或更换。"
+    },
+    "Manual32_18": {
+      "manual_id": "Manual32",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片标出扫地机器人的机身充电触点和 Home Base 充电触点。维护时用干净的干布擦拭两处触点，保持无灰尘和污渍；不要改答提取器或滚刷清洁。"
+    },
+    "Manual36_20": {
+      "manual_id": "Manual36",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是温控器 R/Rc 接线和 R 开关位置示意。若有两根 R 线（R 或 Rh，以及 Rc），将 R 开关拨到向下位置，把 Rc 接入 Rc 端子，把 R/Rh 接入 R 端子。"
+    },
+    "vr_02": {
+      "manual_id": "Manual38",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片是 VR 头显正面部件标注图，包含头带/线缆挂钩、麦克风、遮光罩、镜罩调节键和前侧追踪灯等标号部件。应按图片字母说明部件，不要只回答遮光罩清洗。"
+    },
+    "Manual05_12": {
+      "manual_id": "Manual05",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片展示蒸汽清洁机的延长管、喷射喷嘴和角形喷嘴等附件。延长管用于延伸清洁距离，喷射喷嘴用于集中蒸汽，角形喷嘴用于窗台、马桶内侧等难以触及的位置。"
+    },
+    "Manual16_6": {
+      "manual_id": "Manual16",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是扣紧健身追踪器表带的步骤：将底部表带穿入顶部表带的第一个环扣，再调整到舒适贴合并扣入孔位。"
+    },
+    "fitness_trackers_02": {
+      "manual_id": "Manual16",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片中的部件是健身追踪器 USB 充电线/充电座，用于连接追踪器并接入 USB 电源充电。不要改答表带佩戴步骤。"
+    },
+    "Manual19_62": {
+      "manual_id": "Manual19",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "侧燃烧器安装：让燃烧器底部螺柱对准侧燃烧器滴油盘后部小孔，用蝶形螺母固定，并确认燃烧管正确接合侧燃烧器阀门。"
+    },
+    "Manual36_15": {
+      "manual_id": "Manual36",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "安装温控器 UWP 底座时，把成束电线穿过底座背面并整理好，确保每根电线露出至少约 1/4 英寸，便于插入端子。"
+    },
+    "Manual39_12": {
+      "manual_id": "Manual39",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "脱水操作前必须装好安全盖并关闭内盖，然后再关闭脱水机盖。图片箭头表示把安全盖放入内盖下方位置；不要改答洗衣机部件总览。"
+    },
+    "Manual24_28": {
+      "manual_id": "Manual24",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是微波炉传感器烹饪的推荐用量表：Frozen Entree 10–21 oz，Casserole 1–4 cups，Rice 1/2–2 cups。米饭应使用长粒米；烹饪结束会蜂鸣并显示 END。"
+    },
+    "Manual19_40": {
+      "manual_id": "Manual19",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "灯泡更换前先把控制面板灯开关置于 OFF，并断开适配器插头；按图松开灯座固定螺钉，拆下灯座和透镜后更换灯泡。不要徒手触摸卤素灯泡。"
+    },
+    "Manual03_22": {
+      "manual_id": "Manual03",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是空气净化器灰尘传感器清洁步骤 1：双手握住设备上盖并向上拉起，取下上盖后再清洁传感器。不要改答空气质量指示灯颜色。"
+    },
+    "Manual19_33": {
+      "manual_id": "Manual19",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片标出烤炉 Firebox、burner bracket、carryover tube 和 electrode，属于燃烧器拆卸/清洁步骤。拆下燃烧器时让电极留在火箱内，重新装配时确保燃烧器与阀门开口正确接合。"
+    },
+    "Manual26_9": {
+      "manual_id": "Manual26",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是儿童电动摩托车前灯线路连接图。将前灯线束插头与车身主线束对应插头完全插接，并按图穿过指定走线孔固定。不要改答挡泥板安装。"
+    },
+    "Dish_washer_01": {
+      "manual_id": "Manual06",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片显示洗碗机盐箱盖。取出下层碗篮后，逆时针旋转盐箱盖打开；首次使用先加约 1 L 水，再用盐斗加入洗碗机专用软化盐，最后盖紧并运行短程序冲散溢盐。"
+    },
+    "Manual04_34": {
+      "manual_id": "Manual04",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片展示背负式吹风机正确作业姿势：佩戴并调节肩带，使设备稳定贴合背部，双手控制吹管并保持稳固站姿。该图不是停机开关。"
+    },
+    "Manual26_4": {
+      "manual_id": "Manual26",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是儿童电动摩托车组装前的整车零件爆炸图，用于核对零件编号、方向和装配位置。组装应由成人进行，并按后续分步图逐项安装；不要把总览图当作单一挡泥板步骤。"
+    },
+    "Manual32_5": {
+      "manual_id": "Manual32",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是双模式虚拟墙的 Halo Mode。设备会在中心周围形成约 24 英寸（约 60 cm）的不可见圆形保护区，防止扫地机器人靠近宠物碗、花瓶等物品。"
+    },
+    "Manual04_11": {
+      "manual_id": "Manual04",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片标出吹风机手柄上的油门扳机和油门锁/定速控制部件。按压油门扳机提高发动机转速，使用油门锁保持需要的转速；该图不是停机开关。"
+    },
+    "Manual04_49": {
+      "manual_id": "Manual04",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是吹风机维护图的一部分，包含火花塞检查及约 0.5 mm 间隙等维护项目。应结合每月维护表检查燃油系统、线缆、火花塞和火花阻隔网，不要将它当成单次启动步骤。"
+    },
+    "earphones_07": {
+      "manual_id": "Manual12",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片标出充电盒右侧的电量查看按钮。按一下该按钮可随时查看充电盒电量，LED 指示灯会按剩余容量亮起。"
+    },
+    "Manual40_24": {
+      "manual_id": "Manual40",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是摩托艇练习 5/训练 3 的 8 字路线。先以较大的 8 字和较低速度练习，熟练后逐步缩小 8 字尺寸并提高控制精度。不要改答三种速度状态。"
+    },
+    "Manual40_19": {
+      "manual_id": "Manual40",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是拖曳速度操控训练的 8 字路线，两圆中心间距约 15–21 m（50–70 ft）。以拖曳速度绕标志物完成 8 字，保持低速并逐步提高转向控制。"
+    },
+    "earphones_05": {
+      "manual_id": "Manual12",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "充电盒充电步骤 2：把充电线的标准 USB-A 插头插入合适的 USB 电源端口；随后电池电量 LED 会按容量亮起。"
+    },
+    "fax_01": {
+      "manual_id": "Manual15",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "红色圆圈斜杠是禁止标志，表示该动作不得执行。应结合标志旁的具体图案判断被禁止的行为；本图本身不是搬运步骤。"
+    },
+    "Manual21_3": {
+      "manual_id": "Manual21",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片中的长条部件是键盘磁吸腕托，放在键盘前缘并通过磁力定位，用于支撑手腕、改善打字姿势；可按需拆装。不要改答配置文件按键。"
+    },
+    "Manual40_17": {
+      "manual_id": "Manual40",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是扶正倾覆摩托艇的步骤图：从艇尾接近倾覆艇体，按艇尾标签指示的方向翻转艇体，避免从错误方向扶正造成进水。不要改答速度状态。"
+    },
+    "Manual27_3": {
+      "manual_id": "Manual27",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是蓝牙鼠标安装电池的步骤 3：按正确极性装入两节 AA 电池后，将鼠标电池仓盖重新盖回并确认卡紧。不要改答驱动配对。"
+    },
+    "Manual40_26": {
+      "manual_id": "Manual40",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "这是滑航速度转向训练：先以较低难度练习左右椭圆转向，熟练后再进行连续圆圈和 8 字路线；逐步提高速度并缩小转弯半径。"
+    },
+    "fax_02": {
+      "manual_id": "Manual15",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "该禁止图标表示不得在产品附近使用易燃喷雾。不要解释成禁烟或产品搬运。"
+    },
+    "fax_07": {
+      "manual_id": "Manual15",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "三角形齿轮图标是运动部件危险警告，提醒该区域含有会运动的机械部件，应远离并在维护前断电。不要解释成禁止阳光或搬运步骤。"
+    },
+    "earphones_04": {
+      "manual_id": "Manual12",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "充电盒充电步骤 1：将 USB-C 插头插入充电盒背面的 USB-C 充电端口，然后再把另一端接入合适的 USB 电源。"
+    },
+    "earphones_01": {
+      "manual_id": "Manual12",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "evidence": "图片显示按住左耳机 L 的触控区。按住直到听到第一次提示音后松开，可启动手机语音助手；按手册对应操作也可启动音乐应用并恢复播放。不要改答蓝牙配对流程。"
+    }
+  }
+}

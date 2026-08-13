@@ -1,0 +1,20 @@
+name: ruichuang_customer_service
+version: 1.0.0
+description: 睿创多模态客服专业能力，复用低延迟客服核心，不让通用智能体重写答案。
+entrypoint: SKILL.md
+mcp:
+  transport: stdio
+  command: python
+  args:
+    - -m
+    - customer_service_tools.mcp_server
+  env:
+    CUSTOMER_MCP_EXPOSURE: realtime
+permissions:
+  network: model_provider_only
+  filesystem: read_authorized_attachments
+  admin_tools: false
+artifacts:
+  - customer_answer
+  - evidence_refs
+  - manual_images

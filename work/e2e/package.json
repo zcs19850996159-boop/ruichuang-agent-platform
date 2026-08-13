@@ -1,0 +1,11 @@
+{
+  "name": "ruichuang-workbench-e2e",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test:streaming": "node run_workbench_streaming_gate.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.61.1"
+  }
+}

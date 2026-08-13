@@ -1,0 +1,6 @@
+﻿id,question,category,source_manual,knowledge_point,novelty_reason,max_similarity_to_existing,risk_note,closest_existing_question
+2032,佩戴VR头显前，为什么要清理大于游玩区域的活动空间？需要移开哪些障碍物？,cn_manual,VR头显手册,游玩区域障碍物清理,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.215,OK,"""为确保安全且最佳的使用效果，游玩区域的推荐尺寸是多少？"""
+2117,How do I set auto exposure bracketing on the camera and how are the three shots exposed?,en_manual,Camera manual,AEB exposure bracketing,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.497,OK,How do I set the light timer on the over-the-range microwave?
+2126,What should I check about the windshield and operator visibility before operating the boat?,en_manual,Boat manual,windshield and visibility,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.555,OK,"""What should I do if face over temperature warning on the boat?"""
+2170,Why should the parking brake be set and the ignition disabled before servicing the mower?,en_manual,Lawn mower manual,parking brake before service,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.491,OK,What do the Main Menu and Browser History functions do on the eReader?
+2197,How can I set a television sleep timer so it turns off automatically?,en_manual,TV/radio manual,sleep timer,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.518,OK,"""How can I use the bilge pump of the boat?"""

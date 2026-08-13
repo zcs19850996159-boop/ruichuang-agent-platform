@@ -1,0 +1,13 @@
+profile: competition
+competition_patches_enabled: true
+compatibility_adapter: legacy_agent_v1
+rules:
+  routing: a_rank_question_route_gold.csv
+  answer_overrides: legacy_embedded
+  image_overrides: legacy_reviewed_assets
+cache_policy:
+  enabled: true
+  bind_knowledge_version: true
+  bind_model_version: true
+  bind_prompt_version: true
+

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "suite": "evaluation_public_real_media_2026-07-27",
+  "cases": [
+    {
+      "id": "12",
+      "question": "空调遥控器显示小松树是什么意思？https://pic.imgdb.cn/i/033poCe8rSHwi7wi09mL0T.jpg",
+      "expected_manual": "Manual01",
+      "expected_rule": "evaluation_public_q12",
+      "expected_images": ["Manual01_18"],
+      "answer_must_contain_any": ["等离子净化"],
+      "answer_must_not_contain": []
+    },
+    {
+      "id": "13",
+      "question": "https://pic.imgdb.cn/i/033poCdVrcjp038bgbUgso.jpg 遥控器显示这个是什么情况？",
+      "expected_manual": "Manual01",
+      "expected_rule": "evaluation_public_q13",
+      "expected_images": ["Manual01_20"],
+      "answer_must_contain_any": ["自动运行", "自动转换", "AI"],
+      "answer_must_not_contain": ["正在按下遥控器上的“模式”按钮"]
+    },
+    {
+      "id": "14",
+      "question": "http://xhslink.com/o/5MuBh306QZY 这怎们办啊？",
+      "expected_manual": "Manual02",
+      "expected_rule": "evaluation_public_q14_video",
+      "expected_images": ["Manual02_8"],
+      "expected_media_kind": "video_frame",
+      "minimum_frame_count": 3,
+      "maximum_frame_count": 8,
+      "answer_must_contain_any": ["扶手垫", "扶手支架"],
+      "answer_must_not_contain": ["视频里的部件是椅子的头枕", "重新安装头枕"]
+    },
+    {
+      "id": "15",
+      "question": "https://pic.imgdb.cn/i/033pmY13nIJy7dnqKp7smf.jpg 这个小提篮是干什么用的？灰的，塑料的",
+      "expected_manual": "Manual06",
+      "expected_rule": "evaluation_public_q15",
+      "expected_images": ["Manual06_12"],
+      "answer_must_contain_any": ["餐具篮"],
+      "answer_must_not_contain": ["购物篮"]
+    },
+    {
+      "id": "22",
+      "question": "这门怎么拆下来啊？https://pic.imgdb.cn/i/033plkNmDhJ4CtLgVkhn7v.png",
+      "expected_manual": "Manual28",
+      "expected_rule": "evaluation_public_q22",
+      "expected_images": ["oven_01", "oven_02"],
+      "answer_must_contain_any": ["烤箱门", "铰链"],
+      "answer_must_not_contain": ["洗碗机"]
+    },
+    {
+      "id": "23",
+      "question": "https://pic.imgdb.cn/i/033plzDHnyvn9C9hqi5s3B.png 你们烤箱给的配件是干什么用的？",
+      "expected_manual": "Manual28",
+      "expected_rule": "evaluation_public_q23",
+      "expected_images": ["oven_13"],
+      "answer_must_contain_any": ["烤架烤盘套装", "图 6a", "图6a"],
+      "answer_must_not_contain": ["用于烘焙饼干、蛋糕及披萨"]
+    },
+    {
+      "id": "24",
+      "question": "你们烤箱给的这个网子是干什么用的？ https://pic.imgdb.cn/i/033pm7ZJABeeKTRjeqvQL0.png",
+      "expected_manual": "Manual28",
+      "expected_rule": "evaluation_public_q24",
+      "expected_images": ["oven_10"],
+      "answer_must_contain_any": ["烤架", "烤网"],
+      "answer_must_not_contain": []
+    },
+    {
+      "id": "25",
+      "question": "这个方铁盘是干什么用的啊？https://pic.imgdb.cn/i/033pmJ4N1Ey2CgfYDARBOu.jpg",
+      "expected_manual": "Manual28",
+      "expected_rule": "evaluation_public_q25",
+      "expected_images": ["oven_08"],
+      "answer_must_contain_any": ["接油盘"],
+      "answer_must_not_contain": []
+    },
+    {
+      "id": "29",
+      "question": "https://pic.imgdb.cn/i/033pofHC9D3F0ZMCKzeH2G.jpg 我相机右边俩点怎么变红了？",
+      "expected_manual": "Manual29",
+      "expected_rule": "evaluation_public_q29",
+      "expected_images": ["Manual29_46"],
+      "answer_must_contain_any": ["剩余相纸", "低相纸"],
+      "answer_must_not_contain": []
+    }
+  ]
+}

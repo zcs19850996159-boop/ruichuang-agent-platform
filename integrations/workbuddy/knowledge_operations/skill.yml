@@ -1,0 +1,30 @@
+name: ruichuang_knowledge_operations
+version: 1.1.0
+description: 睿创企业商品知识运营能力，通过受控远程接口完成多文件分析、暂存、阻断诊断、版本回归、审批发布、验证与回滚。
+entrypoint: SKILL.md
+mcp:
+  transport: stdio
+  command: python
+  args:
+    - scripts/knowledge_ops_proxy.py
+  env:
+    RUICHUANG_KNOWLEDGE_BASE_URL: ${RUICHUANG_KNOWLEDGE_BASE_URL}
+    RUICHUANG_KNOWLEDGE_TENANT_ID: ${RUICHUANG_KNOWLEDGE_TENANT_ID}
+    RUICHUANG_KNOWLEDGE_SPACE_ID: ${RUICHUANG_KNOWLEDGE_SPACE_ID}
+    RUICHUANG_KNOWLEDGE_API_TOKEN: ${RUICHUANG_KNOWLEDGE_API_TOKEN}
+    RUICHUANG_KNOWLEDGE_ALLOWED_ROOTS: ${WORKBUDDY_AUTHORIZED_ROOTS}
+permissions:
+  network: ruichuang_control_api
+  filesystem: read_authorized_product_materials
+  admin_tools: true
+  explicit_approval:
+    - publish_knowledge_version
+    - rollback_knowledge_version
+artifacts:
+  - product_material_analysis
+  - staging_manifest
+  - ingestion_quality_report
+  - knowledge_regression_report
+  - ingestion_blocker_diagnosis
+  - knowledge_version
+  - audit_trace

@@ -1,0 +1,9 @@
+.git
+.env
+backups
+logs
+outputs/api
+outputs/rag_agent
+work/__pycache__
+work/*.bak*
+

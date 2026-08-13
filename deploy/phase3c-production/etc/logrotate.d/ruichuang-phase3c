@@ -1,0 +1,15 @@
+/root/autodl-tmp/customer_agent_phase3/app/outputs/rag_agent/*.log
+/root/autodl-tmp/customer_agent_phase3/app/outputs/api/*.jsonl
+/root/autodl-tmp/customer_agent_phase3/infra/logs/*.log
+/var/log/postgresql/phase3c.log {
+    daily
+    rotate 14
+    maxsize 20M
+    su root root
+    compress
+    delaycompress
+    missingok
+    notifempty
+    copytruncate
+    create 0640 root root
+}

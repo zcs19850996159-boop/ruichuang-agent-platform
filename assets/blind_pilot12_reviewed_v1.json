@@ -1,0 +1,206 @@
+{
+  "version": "blind-pilot12-review-v1",
+  "reviewed_at": "2026-07-27",
+  "reviewer": "codex_visual_and_source_review",
+  "human_approval_required": true,
+  "cases": [
+    {
+      "case_id": "blind-img-001",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual14",
+      "question": "健身单车控制台出现 E2 错误时，应按手册检查哪些位置？",
+      "answer_must_contain_groups": [
+        ["E2"],
+        ["数据线", "data cable"],
+        ["连接", "orientation"],
+        ["经销商", "distributor", "售后"]
+      ],
+      "answer_must_not_contain": ["清洁传感器", "重置控制台"],
+      "acceptable_images": ["Manual14_39"],
+      "evidence_summary": "E2：检查数据线完整性；检查数据线连接和方向，连接器卡扣应对齐并卡入；若控制台电子部件仍异常，联系当地经销商。",
+      "review_note": "原自动答案加入了手册未支持的传感器清洁和控制台重置。"
+    },
+    {
+      "case_id": "blind-img-002",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual10",
+      "question": "图片列出的 Err 01、Err 02、Err 04、Err 05 和 Err 99 分别表示什么，应如何处理？",
+      "answer_must_contain_groups": [
+        ["Err 01", "Err01"],
+        ["Err 02", "Err02"],
+        ["Err 04", "Err04"],
+        ["Err 05", "Err05"],
+        ["Err 99", "Err99"]
+      ],
+      "answer_must_not_contain": [],
+      "acceptable_images": ["Manual10_235"],
+      "evidence_summary": "Err01 镜头通信/清洁触点；Err02 CF卡问题/重插、格式化或更换；Err04 卡满/删除或更换；Err05 闪光灯弹出受阻/开关置ON；Err99 其他错误/重装电池，非原厂镜头也可能导致。",
+      "review_note": "试点答案文字正确，但返回的正常拍摄步骤图与错误码问题无关。"
+    },
+    {
+      "case_id": "blind-img-003",
+      "review_status": "human_reviewed_approved",
+      "manual_id": "Manual23",
+      "question": "请根据 Manual23 手册说明，图片中的 1～5 和 1/4、1/2、3/4 刻度是什么标识？",
+      "answer_must_contain_groups": [
+        ["割草高度", "切割高度", "height of cut"],
+        ["139-6699"]
+      ],
+      "answer_must_not_contain": ["空调", "风速", "错误码", "油箱", "加油"],
+      "acceptable_images": ["Manual23_18"],
+      "evidence_summary": "Manual23 的产品品类是割草机（Lawn Mower）；手册将 139-6699 明确标为 Height of cut decal，图中显示 1～5 和分数刻度。",
+      "review_note": "已结合手册上下文、图片清单和项目产品映射完成人工证据复核。可确认产品品类为割草机，但不在证据不足时扩展到具体机型。"
+    },
+    {
+      "case_id": "blind-img-004",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual17",
+      "question": "请根据冰箱手册说明，安全警示图中的两种做法为什么禁止？",
+      "answer_must_contain_groups": [
+        ["不要拉扯电源线", "请勿拉扯电源线", "禁止拉扯电源线"],
+        ["湿手", "wet hand"],
+        ["触电", "伤害"]
+      ],
+      "answer_must_not_contain": ["错误码", "遥控器", "通信故障", "湿抹布", "擦拭冰箱门"],
+      "acceptable_images": ["Manual17_5"],
+      "evidence_summary": "不要拉扯电源线或用湿手触碰电源插头，可能引发触电或伤害。",
+      "review_note": "原自动分类为错误码，实际为用电安全警示。"
+    },
+    {
+      "case_id": "blind-img-005",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual09",
+      "question": "请根据手册说明图中的湿储物舱位于哪里、完整的打开和关闭步骤，以及舱盖未锁牢有什么影响。",
+      "answer_must_contain_groups": [
+        ["游泳平台", "swim platform"],
+        ["顺时针", "clockwise"],
+        ["逆时针", "counterclockwise"],
+        ["锁定手柄", "锁扣手柄", "lock handle"]
+      ],
+      "answer_must_not_contain": ["洗衣机", "门铰链", "错误码"],
+      "acceptable_images": ["Manual09_143", "Manual09_144"],
+      "evidence_summary": "湿储物舱位于游泳平台下；打开时抬起锁定手柄、顺时针转动并打开后平台舱盖；关闭时关盖、逆时针转动确认锁牢并压下手柄。舱盖未锁牢时发动机不会启动。",
+      "review_note": "原自动分类为错误码，视觉模型误认成洗衣机门铰链。"
+    },
+    {
+      "case_id": "blind-img-006",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual35",
+      "question": "电视的 CH. 菜单中 Auto prog.、Manual 和 Favorite 分别用于什么？如何进入自动搜台？",
+      "answer_must_contain_groups": [
+        ["Auto prog.", "自动节目", "自动搜台"],
+        ["Manual", "手动"],
+        ["Favorite", "收藏", "最爱"]
+      ],
+      "answer_must_not_contain": [],
+      "acceptable_images": ["Manual35_23", "Manual35_5", "Manual35_6"],
+      "evidence_summary": "CH. 菜单包含自动节目、手动和收藏频道；选择 Auto prog. 后开始搜索并存储可接收频道。",
+      "review_note": "图片与手册主题一致。"
+    },
+    {
+      "case_id": "blind-img-007",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual25",
+      "question": "ASUS EZ Installer 显示 Insert a USB storage device 时，请根据手册说明从选择设备到创建启动盘的完整步骤和数据风险。",
+      "answer_must_contain_groups": [
+        ["8 GB", "8GB"],
+        ["Refresh", "刷新"],
+        ["Next", "下一步"],
+        ["备份", "backup", "back up"],
+        ["格式化", "formatted"]
+      ],
+      "answer_must_not_contain": [],
+      "acceptable_images": ["Manual25_90", "Manual25_93", "Manual25_94"],
+      "evidence_summary": "插入至少8GB的USB设备；未显示时点击刷新；选择设备后点击Next；创建启动盘会清除并格式化设备，需先备份。",
+      "review_note": "试点答案和配图均可支持问题。"
+    },
+    {
+      "case_id": "blind-img-008",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual30",
+      "question": "图中正在安装什么部件？怎样判断压力锅蒸汽释放阀安装正确？",
+      "answer_must_contain_groups": [
+        ["蒸汽释放阀", "steam release valve"],
+        ["蒸汽释放管", "释放管", "steam release pipe"],
+        ["按下", "按压", "press down"],
+        ["松动", "loosely"],
+        ["倒置", "翻转", "turned over"]
+      ],
+      "answer_must_not_contain": ["电熨斗"],
+      "acceptable_images": ["Manual30_33"],
+      "evidence_summary": "把蒸汽释放阀放在释放管上并用力按下；正确安装时阀门会松动地坐在管上，但锅盖倒置时仍应保持在位；使用前必须安装。",
+      "review_note": "原自动分类为控制面板，视觉模型误认成电熨斗。"
+    },
+    {
+      "case_id": "blind-img-009",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual35",
+      "question": "电视菜单中的 Caption 应如何设置为 Off、Mode1、Mode2、Text1 或 Text2？",
+      "answer_must_contain_groups": [
+        ["Special"],
+        ["Caption"],
+        ["Off"],
+        ["Mode1"],
+        ["Mode2"],
+        ["Text1"],
+        ["Text2"],
+        ["MENU", "菜单"]
+      ],
+      "answer_must_not_contain": [],
+      "acceptable_images": ["Manual35_38"],
+      "evidence_summary": "按MENU进入Special，选择Caption，再选择Off/Mode1/Mode2/Text1/Text2，重复按MENU退出；电视会记住上次模式。",
+      "review_note": "试点文字大体正确，但返回的 Manual35_41/42 是邻近连接示意图，不支持字幕设置步骤。"
+    },
+    {
+      "case_id": "blind-img-010",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual08",
+      "question": "空气炸锅面板显示 180 和预设图标时，如何选择预设并开始烹饪？",
+      "answer_must_contain_groups": [
+        ["空气炸锅", "Airfryer"],
+        ["Menu", "菜单"],
+        ["闪烁", "blinking"],
+        ["On/off", "开关", "开/关"],
+        ["开始", "start"]
+      ],
+      "answer_must_not_contain": ["烤箱"],
+      "acceptable_images": ["air_fryer_16", "air_fryer_07", "Manual08_12"],
+      "evidence_summary": "按Menu直到所需预设图标闪烁，再按On/off开始烹饪；180是温度显示。",
+      "review_note": "强视觉匹配已把手册从Manual28纠正到Manual08；正式答案不应继续称为烤箱。"
+    },
+    {
+      "case_id": "blind-img-011",
+      "review_status": "model_reviewed_ready_for_human_approval",
+      "manual_id": "Manual25",
+      "question": "ASUS EZ Installer 中选择 Windows 7 OS disc to ISO file 后，后续步骤是什么？",
+      "answer_must_contain_groups": [
+        ["Next", "下一步"],
+        ["I agree", "同意"],
+        ["保存", "save"],
+        ["ISO"],
+        ["DVD", "光盘"]
+      ],
+      "answer_must_not_contain": [],
+      "acceptable_images": ["Manual25_94", "Manual25_95", "Manual25_97"],
+      "evidence_summary": "选择OS disc to ISO file并点Next；勾选I agree再Next；选择保存ISO的文件夹；完成后可刻录到空白DVD。",
+      "review_note": "试点答案与手册证据一致。"
+    },
+    {
+      "case_id": "blind-img-012",
+      "review_status": "human_reviewed_approved",
+      "manual_id": "Manual37",
+      "question": "电动牙刷说明页中的这个电池形图标表示什么反馈？",
+      "answer_must_contain_groups": [
+        ["电池指示灯", "电池指示", "battery indication", "battery indicator"],
+        ["白色", "white"],
+        ["琥珀色", "amber"],
+        ["启用", "activated"],
+        ["停用", "deactivated"]
+      ],
+      "answer_must_not_contain": ["空调", "电视", "遥控器"],
+      "acceptable_images": ["toothbrush0_11"],
+      "evidence_summary": "该放大图是电池指示灯的启停确认反馈：白色闪3次并伴随由低到高提示音表示启用；琥珀色闪3次并伴随由高到低提示音表示停用。紫色灯环属于压力传感反馈，不是该图标本身。",
+      "review_note": "已按飞利浦 Sonicare 9900 Prestige 官方手册第17—18页的表格列对齐和原图完成复核；此前把它归为刷头更换提醒图标属于版式/OCR错位，现已纠正。"
+    }
+  ]
+}

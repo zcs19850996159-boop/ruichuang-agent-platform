@@ -1,0 +1,204 @@
+﻿id,question,category,source_manual,knowledge_point,novelty_reason,max_similarity_to_existing,risk_note,closest_existing_question
+2001,下单后想把收货地址从公司改到家里，如果订单已经部分发货，剩下的商品还能改地址吗？需要怎么处理？,service_policy,客服题,订单改地址/分仓前置,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.521,OK,我想修改收货地址，但订单已经发货了，还能拦截改址吗？
+2002,同一个订单里的几件商品能合并发货吗？如果系统自动拆成多个包裹，会不会影响售后和发票？,service_policy,客服题,合并发货/拆单发货,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.478,OK,同一个订单里有两件商品，只退其中一件会影响发票吗？
+2003,快递被放到驿站但我不方便去取，能要求重新派送到家吗？超过取件时间退回怎么办？,service_policy,客服题,自提点/驿站问题,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.29,OK,"""我购买的商品，快递送达时，我不在家，怎么办？"""
+2004,我签收后才发现配件包不见了，但外包装没有破损，这种情况还能申请补发配件吗？,service_policy,客服题,签收后缺配件,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.349,OK,物流显示已签收但我没有收到货，这种情况要联系谁核实？
+2005,大家电已经预约了送货时间，但我临时不在家，能不能改约？改约会不会产生费用？,service_policy,客服题,预约配送改期,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.295,OK,"""我购买的商品，快递送达时，我不在家，怎么办？"""
+2006,正品没问题，但是随订单送的赠品坏了，赠品也能补发或维修吗？,service_policy,客服题,赠品售后,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.383,OK,收到赠品损坏了，可以单独补发赠品吗？
+2007,我买的是套装商品，其中一个配件有问题，可以只换这个配件吗，还是必须整套退回？,service_policy,客服题,组合套装部分退换,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.393,OK,如果商品缺少配件但主机能用，可以只补发配件吗？
+2008,我刚买完商品第二天就降价了，可以申请补差价吗？需要满足什么条件？,service_policy,客服题,补差价/价格保护,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.464,OK,我想了解价格保护规则，刚买完就降价可以退差价吗？
+2009,电子发票已经开了，但是我在系统里一直下载不了，能重新发送到邮箱吗？,service_policy,客服题,电子发票下载失败,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.271,OK,"""我想取消订单，但是订单已经付款了，能全额退款吗？"""
+2010,企业采购一批商品，能不能按部门或项目拆成多张发票？需要提前提供哪些信息？,service_policy,客服题,公司采购多张发票,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.29,OK,商品用了两天出现质量问题，可以换货还是只能维修？需要提供什么凭证？
+2011,预售商品已经付了定金但不想付尾款了，定金能退吗？如果付了尾款后取消怎么算？,service_policy,客服题,预售尾款退款,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.317,OK,"""我想取消订单，但是订单已经付款了，能全额退款吗？"""
+2012,我买的是定制刻字商品，商家还没发货，现在想取消订单，可以全额退款吗？,service_policy,客服题,定制商品取消,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.433,OK,"""我想取消订单，但是订单已经付款了，能全额退款吗？"""
+2013,我在一个城市买的商品，搬家到外地后出现故障，还能在当地申请保修或上门维修吗？,service_policy,客服题,跨区保修,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.418,OK,"""我购买的商品，使用一段时间后出现质量问题，还能售后吗？"""
+2014,商品寄修期间影响正常使用，你们能不能提供备用机或临时替代方案？,service_policy,客服题,维修期间备用机,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.292,OK,"""请问你们的商品能提供试用装吗？"""
+2015,售后检测说是人为损坏需要付费维修，但我认为不是人为造成的，能申请复检吗？,service_policy,客服题,维修报价争议,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.279,OK,"""我想咨询一下，你们的售后维修服务范围是什么？"",
+""如果是人为损坏的，能维修吗？维修费用怎么算？"""
+2016,同一故障已经维修两次又复发，可以申请直接换新或退货吗？,service_policy,客服题,二次维修换新,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.333,OK,商品生产日期比较早，会不会影响保质期？可以申请换新吗？
+2017,上门安装完成后发现尺寸和家里位置不匹配，商品还能退换吗？安装费怎么处理？,service_policy,客服题,安装后发现尺寸不合适,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.377,OK,"""我想给商品更换成更大的尺寸，能换吗？"",
+""尺寸差价怎么处理？"""
+2018,购买时勾选了旧机回收，但新机已经送到，回收人员一直没上门怎么办？,service_policy,客服题,旧机回收延迟,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.321,OK,"""我购买的商品，快递送达时，我不在家，怎么办？"""
+2019,快递显示到不了我填写的地址，需要转运到镇上的网点，这种情况能改派其他快递吗？,service_policy,客服题,物流超区转运,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.306,OK,"""快递丢失了，怎么办？""，
+""这种情况你们会怎么赔偿？多久能解决？"""
+2020,购买凭证找不到了，但是订单记录还在，商品还能享受质保吗？,service_policy,客服题,保修凭证缺失,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.34,OK,商品过了7天但还在保修期内，出现故障还能走售后吗？
+2021,我把商品寄回售后维修，售后收到后说运输途中又损坏了，这个责任怎么处理？,service_policy,客服题,售后件运输损坏,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.339,OK,售后寄回检测后说没有故障，来回运费一般怎么处理？
+2022,我收到的快递面单是我的，但里面商品明显不是我买的，应该先退回还是等你们补发？,service_policy,客服题,错收他人包裹,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.476,OK,收到的型号和我下单的不一致，应该选择退货还是补发？
+2023,退款原路退回的银行卡已经注销了，退款会失败吗？需要我提供新的收款账户吗？,service_policy,客服题,退款银行卡注销,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.367,OK,退款会原路退回吗？银行卡和信用卡到账时间一样吗？
+2024,订单退款后，使用的优惠券和积分会自动退回吗？如果已经过期怎么办？,service_policy,客服题,积分/优惠恢复,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.286,OK,退款会原路退回吗？银行卡和信用卡到账时间一样吗？
+2025,订单已经完成很久了，现在还能补开发票吗？超过开票期限怎么办？,service_policy,客服题,补开发票时限,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.367,OK,发票抬头写错了，还能重新开电子发票吗？
+2026,快递长时间停滞，我不想等了，可以直接取消并退款吗？如果包裹后来送到怎么办？,service_policy,客服题,运输延误取消,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.361,OK,"""我购买的商品，快递送达时，我不在家，怎么办？"""
+2027,一个订单里既有少发，又有部分商品破损，需要分开申请售后还是提交一个工单？,service_policy,客服题,少发与破损同时存在,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.361,OK,同一个订单里有两件商品，只退其中一件会影响发票吗？
+2028,上门安装时缺少必要配件，我能自己购买配件后让安装师傅安装吗？会影响保修吗？,service_policy,客服题,安装配件自购,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.4,OK,大件商品需要上门安装，可以帮我预约安装师傅吗？
+2029,换货后的商品质保期是从原订单日期开始算，还是从换货签收日期重新计算？,service_policy,客服题,换货后质保计算,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.519,OK,保修期是从下单时间算，还是从签收时间算？
+2030,普通客服多次没有解决问题，我可以申请主管或专员介入吗？处理时效一般怎么安排？,service_policy,客服题,客服升级投诉,服务场景与原50题不同，聚焦地址、拆单、自提、赠品、定制、复检、价格保护等未覆盖场景,0.271,OK,我想投诉售后处理太慢，平台一般会怎么跟进？
+2031,VR头显为什么不建议12岁以下儿童使用？使用前家长需要注意什么？,cn_manual,VR头显手册,12岁以下儿童限制,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.327,OK,"""使用发电机的直流保护器时，我需要注意什么？"""
+2032,佩戴VR头显前，为什么要清理大于游玩区域的活动空间？需要移开哪些障碍物？,cn_manual,VR头显手册,游玩区域障碍物清理,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.215,OK,"""为确保安全且最佳的使用效果，游玩区域的推荐尺寸是多少？"""
+2033,使用VR头显时出现头晕、视觉异常或恶心时，应该怎样处理？什么时候才能继续使用？,cn_manual,VR头显手册,不适症状处理,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.282,OK,"""使用和操作VR头显时应采取哪些安全预防措施，以确保用户安全和设备使用寿命？"""
+2034,初次使用VR头显时应该怎样安排使用时长和休息时间？,cn_manual,VR头显手册,休息频率,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.409,OK,首次使用洗碗机前，应该怎样添加专用盐？
+2035,人体工学椅的座椅高度应该怎样调节？调节时身体需要怎么配合？,cn_manual,人体工学椅手册,椅子高度调节,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.281,OK,人体工学椅扶手用久后有点松动，手册里是怎么解释和处理的？
+2036,人体工学椅的椅背后仰功能如何开启和锁定？复位时为什么要靠住椅背？,cn_manual,人体工学椅手册,椅背后仰锁定,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.264,OK,"""椅子的扶手使用一段时间后为什么会松动？"""
+2037,人体工学椅的腰枕按摩功能怎样启用？使用时需要连接什么接口？,cn_manual,人体工学椅手册,腰枕按摩功能,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.32,OK,"""椅子的扶手使用一段时间后为什么会松动？"""
+2038,组装人体工学椅前为什么建议保留原包装箱？,cn_manual,人体工学椅手册,退换包装保留,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.455,OK,组装这把人体工学椅时，包装里应有哪些主要零部件？
+2039,装配健身单车前，场地需要满足哪些空间和平整度要求？,cn_manual,健身单车手册,装配区域要求,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.429,OK,"""启动健身单车前，我需要做什么？"""
+2040,健身单车含有磁铁时，佩戴起搏器等医疗设备的人使用前需要注意什么？,cn_manual,健身单车手册,磁铁医疗设备风险,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.408,OK,"""启动健身单车前，我需要做什么？"""
+2041,健身单车为什么必须按给定顺序装配，并在完全装配检查前不能使用？,cn_manual,健身单车手册,装配顺序风险,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.292,OK,"""启动健身单车前，我需要做什么？"""
+2042,健身单车维修或更换零件时为什么应优先使用原厂替换零件？,cn_manual,健身单车手册,原厂配件要求,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.318,OK,"""启动健身单车前，我需要做什么？"""
+2043,第一次设置健身追踪器时，需要在手机应用中完成哪些基本操作？,cn_manual,健身追踪器手册,手机应用设置,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.449,OK,健身追踪器开箱时，包装中应包含哪些物品？
+2044,健身追踪器高级版主要提供哪些个性化资源？如何兑换试用订阅？,cn_manual,健身追踪器手册,高级版订阅,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.345,OK,"""使用健身追踪器时，我可能会遇到哪些问题以及该如何解决？"""
+2045,在健身追踪器应用中可以查看哪些健康、活动或睡眠数据？,cn_manual,健身追踪器手册,应用中查看数据,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.391,OK,健身追踪器开箱时，包装中应包含哪些物品？
+2046,为什么健身追踪器的数据不能作为医疗或科学诊断依据？,cn_manual,健身追踪器手册,手表非医疗用途,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.348,OK,"""健身追踪器能对手机的通知实现哪些功能？"""
+2047,儿童电动摩托车首次使用前电池要充多久？为什么不能连续充电超过20小时？,cn_manual,儿童电动摩托车手册,首次充电时长,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.346,OK,"""如何安装儿童电动摩托车的前轮？"""
+2048,儿童电动摩托车的适用年龄、最大载重、电池和保险丝规格是什么？,cn_manual,儿童电动摩托车手册,适用年龄载重,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.383,OK,"""如何安装儿童电动摩托车的前轮？"""
+2049,儿童电动摩托车为什么必须由成人组装？组装时儿童应如何远离风险？,cn_manual,儿童电动摩托车手册,成人组装要求,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.333,OK,"""如何安装儿童电动摩托车的前轮？"""
+2050,组装儿童电动摩托车前为什么要确认零件齐全并保留包装？,cn_manual,儿童电动摩托车手册,组装前零件确认,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.465,OK,"""如何安装儿童电动摩托车的前轮？"""
+2051,冰箱手册中的危险、警告、注意分别代表什么严重程度？,cn_manual,冰箱手册,安全警示词含义,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.298,OK,功能键盘初次使用时，手册中的设置步骤是什么？
+2052,冰箱为什么应使用专用插座，不能与多个设备共用一个插座？,cn_manual,冰箱手册,专用插座,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.245,OK,使用吹风机作业时，需要穿戴哪些个人防护装备？
+2053,安装或移动冰箱时，为什么要防止电源线被挤压、弯折或压在冰箱背后？,cn_manual,冰箱手册,电源线挤压风险,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.222,OK,清洗水泵油箱滤网时，应按什么顺序拆洗和装回？
+2054,冰箱为什么必须可靠接地？如果不理解接地说明应该怎么做？,cn_manual,冰箱手册,接地要求,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.264,OK,可以给我补发一份纸质说明书吗？如果没有纸质版怎么办？
+2055,功能键盘包装内通常包含哪些主要物品和拆装工具？,cn_manual,功能键盘手册,包装内容,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.423,OK,"""功能键盘的保修政策通常包含哪些内容，又不包含哪些内容？"""
+2056,功能键盘上的音量滚轮、扬声器静音键、Win锁定键和亮度键分别有什么用途？,cn_manual,功能键盘手册,音量滚轮与静音键,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.276,OK,功能键盘初次使用时，手册中的设置步骤是什么？
+2057,功能键盘如何通过FN组合键切换不同配置文件？,cn_manual,功能键盘手册,配置文件快捷键,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.341,OK,"""如何将功能键盘搭配CAM软件使用？"""
+2058,功能键盘上的数字锁定、大小写锁定和滚动锁定指示灯分别对应什么状态？,cn_manual,功能键盘手册,指示灯含义,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.291,OK,功能键盘初次使用时，手册中的设置步骤是什么？
+2059,发电机民用、商业或租赁用途的保修期限有什么区别？,cn_manual,发电机手册,保修期限,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.34,OK,"""使用发电机的直流保护器时，我需要注意什么？"""
+2060,发电机哪些情况不属于一般保修范围？,cn_manual,发电机手册,保修除外责任,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.293,OK,发电机使用燃油时有哪些易燃和有毒方面的安全提醒？
+2061,为什么发电机手册应视为发动机永久组成部分并在转售时随机器移交？,cn_manual,发电机手册,手册随机器转售,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.281,OK,"""为了正确更换发电机的发动机机油，我需要遵循的前六个步骤是什么？"""
+2062,发电机手册中安全警示符号、警告、注意和注释分别提醒用户什么？,cn_manual,发电机手册,警示标识含义,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.302,OK,"""使用发电机的直流保护器时，我需要注意什么？"""
+2063,拆卸旧温控器前，如何确认供暖或制冷系统的电源已经关闭？,cn_manual,可编程温控器手册,关闭电源确认,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.31,OK,"""如何调整温控器的系统和风扇运行设置，以优化供暖和制冷效果？"""
+2064,旧温控器如果有粗黑线或120/240伏电压，为什么不能继续安装这款温控器？,cn_manual,可编程温控器手册,线电压系统排除,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.235,OK,"""如何调整温控器的程序日程，以实现高效的能源利用和温度控制？"""
+2065,拆旧温控器前为什么要拍摄当前接线照片？电线颜色相同时应该怎么处理？,cn_manual,可编程温控器手册,拍照记录接线,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.357,OK,可编程温控器要设置日期和时间时，应该怎么操作？
+2066,安装新温控器前为什么要拆除旧温控器上的跨接线？计数端子时应不应包含跨接线？,cn_manual,可编程温控器手册,跨接线处理,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.196,OK,"""如何安装空调遥控器支架？"""
+2067,吹风机上的警示标识如果破损或磨损，应该如何处理？,cn_manual,吹风机手册,警示标识维护,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.41,OK,"""吹风机冷机时，该如何启动？"""
+2068,吹风机主要用于什么场景？操作时为什么要求双脚稳固站立在地面上？,cn_manual,吹风机手册,用途限制,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.231,OK,"""椅子的扶手使用一段时间后为什么会松动？"""
+2069,给吹风机处理燃油时，为什么要远离明火并避免皮肤或衣物接触燃油？,cn_manual,吹风机手册,燃油处理安全,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.292,OK,"""使用吹风机时，如何调节化油器？"""
+2070,吹风机说明书为什么强调故障排查和全面检修人员也必须理解安全章节？,cn_manual,吹风机手册,维护人员适用范围,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.296,OK,"""操作吹风机时，人员需要注意哪些安全要点？"""
+2071,驾驶摩托艇前为什么要持续观察周围水域、船只和障碍物？,cn_manual,摩托艇手册,航行前观察,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.254,OK,"""在驾驶摩托艇进行中低速转弯时，如何控制油门并保持行驶的稳定性和操控性？"""
+2072,摩托艇载人时，乘员为什么要保持低重心并按要求抓握扶手？,cn_manual,摩托艇手册,乘员重心,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.269,OK,在深水中重新登上摩托艇并保持平衡，手册建议怎样做？
+2073,摩托艇在狭窄水道、靠近码头或其他船只时为什么要降低速度？,cn_manual,摩托艇手册,水域规则,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.222,OK,"""驾驶摩托艇时，如何避免发生碰撞事故，保障自身和水上其他人员的安全？"""
+2074,驾驶摩托艇时为什么要正确佩戴紧急停机绳或安全绳？,cn_manual,摩托艇手册,紧急停机绳,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.305,OK,"""驾驶摩托艇时，如何避免发生碰撞事故，保障自身和水上其他人员的安全？"""
+2075,为什么水泵发动机不能在封闭区域运行？应在什么环境下操作？,cn_manual,水泵手册,废气中毒风险,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.333,OK,"""水泵发动机安全停机的正确步骤是什么？"""
+2076,水泵运行后发动机和消音器发烫时，机器摆放要注意什么？,cn_manual,水泵手册,热消音器安全距离,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.449,OK,"""使用发电机的直流保护器时，我需要注意什么？"""
+2077,操作或运输水泵时为什么要保持机器直立？倾斜可能造成什么问题？,cn_manual,水泵手册,加油姿态,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.231,OK,清洗水泵油箱滤网时，应按什么顺序拆洗和装回？
+2078,水泵燃油不慎溅到皮肤、衣物或眼睛时应如何处理？,cn_manual,水泵手册,燃油接触应急,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.267,OK,清洗水泵油箱滤网时，应按什么顺序拆洗和装回？
+2079,洗碗机为什么要求用户保留并随产品转赠用户手册？,cn_manual,洗碗机手册,用户手册保管,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.273,OK,洗碗机洗涤剂应该加在哪里，添加步骤是什么？
+2080,使用洗碗机前的预洗和装载环节，哪些做法有助于节能并获得更好洗涤效果？,cn_manual,洗碗机手册,节能提示,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.419,OK,"""如何在洗碗机中添加和使用亮碟剂以获得更好的洗涤效果？"""
+2081,洗碗机的盐量指示灯和亮碟剂指示灯分别提醒用户什么？,cn_manual,洗碗机手册,盐量和亮碟剂指示灯,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.348,OK,"""空气净化器的室内空气质量指示灯是什么？"""
+2082,洗碗机运行中如果需要取消或更改程序，应关注哪些控制面板操作？,cn_manual,洗碗机手册,取消或更改程序,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.408,OK,如果要拆下烤箱门，应该按哪些步骤操作？
+2083,烤箱手册中的危险警示符号和警告术语用于提醒哪些风险？,cn_manual,烤箱手册,安全警示符号,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.327,OK,给冰箱连接电源时，手册提醒要注意哪些安全事项？
+2084,为什么进行烤箱安装或维护前必须先断开设备电源？,cn_manual,烤箱手册,安装前断电,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.256,OK,"""如何为蓝牙激光鼠标安装电池？"""
+2085,烹饪结束后打开烤箱门时，为什么要先缓慢排出热空气或蒸汽？,cn_manual,烤箱手册,打开烤箱门排热,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.264,OK,发电机需要打开燃油开关供油时，具体操作步骤是什么？
+2086,为什么不能在烤箱内加热密封罐或密封容器？,cn_manual,烤箱手册,禁止密封容器加热,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.229,OK,"""如何使用烤箱的油脂过滤器？"""
+2087,使用电钻前，工作区域应如何保持整洁、照明和人员隔离？,cn_manual,电钻手册,工作区域安全,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.356,OK,"""使用电钻时，如何安装单套无键夹头？"""
+2088,电钻接通电源或装入电池组前，如何防止意外启动？,cn_manual,电钻手册,防止意外启动,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.316,OK,"""吹风机冷机时，该如何启动？"""
+2089,为什么户外操作电钻时要使用适合户外的延长线？,cn_manual,电钻手册,户外延长线,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.263,OK,"""烤箱的催化侧面板有什么作用？"""
+2090,在潮湿环境中必须使用电钻时，为什么建议使用带漏电保护器的电源？,cn_manual,电钻手册,GFCI保护,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.316,OK,"""使用电钻的腰带挂钩和批头夹时，需要特别注意什么？"""
+2091,混合即时相机第一次开机后，需要完成哪些初始设置？,cn_manual,相机手册,初始设置,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.44,OK,"""如何设置混合即时相机的手动打印模式（初始设置）？"""
+2092,混合即时相机如何查看剩余电量？不同电量状态对使用有什么影响？,cn_manual,相机手册,剩余电量查看,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.375,OK,"""如何查看蓝牙激光鼠标的电量状态？"""
+2093,混合即时相机上的选择按钮和指令拨盘通常用于哪些菜单或拍摄操作？,cn_manual,相机手册,选择按钮和指令拨盘,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.375,OK,"""如何使用混合即时相机拍摄照片？"""
+2094,混合即时相机LCD显示屏会显示哪些拍摄或打印相关信息？,cn_manual,相机手册,LCD显示信息,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.409,OK,"""如何使用混合即时相机拍摄照片？"""
+2095,空气净化器初始安装时为什么要与墙壁保持至少12英寸距离？,cn_manual,空气净化器手册,安装距离,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.34,OK,"""空气净化器需要长期存放时该怎么做？"""
+2096,空气净化器为什么应避免安装在电视或电子设备3英尺以内？,cn_manual,空气净化器手册,电子设备距离,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.409,OK,"""如何清洁空气净化器的设备内外？"""
+2097,空气净化器出现异响、焦糊味或冒烟时应立即采取什么措施？,cn_manual,空气净化器手册,异响焦味冒烟,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.348,OK,"""空气净化器需要长期存放时该怎么做？"""
+2098,为什么空气净化器不应使用非厂家推荐的滤网？,cn_manual,空气净化器手册,滤网兼容性,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.5,OK,"""如何清洁空气净化器的滤网？"""
+2099,使用空调时，哪些日常做法可以降低耗电并保持制冷或除湿效果？,cn_manual,空调手册,节能小贴士,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.276,OK,"""使用健身追踪器时，我可能会遇到哪些问题以及该如何解决？"""
+2100,为什么空调手册建议保存购物小票并记录型号、序列号和购买日期？,cn_manual,空调手册,购买信息存档,来自中文手册中未被原公开题直接覆盖的安全、安装、维护、规格或操作知识点,0.192,OK,空调遥控器没电了，按照手册应该怎样更换电池？
+2101,How should the camera neck strap be threaded through the strap mount before first use?,en_manual,Camera manual,camera strap attachment,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.476,OK,How should I connect the base station for the landline phone?
+2102,"What handling precautions help prevent damage to the camera body, LCD monitor, lens contacts, and CF card?",en_manual,Camera manual,camera handling precautions,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.439,OK,"""What safety precautions should be followed to ensure safe operation during this process?"""
+2103,"How can I check the camera battery level after turning the power switch on, and what do the different battery indicators mean?",en_manual,Camera manual,battery level check,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.516,OK,How can I check the battery level on the landline phone?
+2104,"What do the OFF and ON positions of the camera power switch do, and when should each position be used?",en_manual,Camera manual,power switch states,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.465,OK,What is the correct way to mount a lens on the camera before shooting?
+2105,What is the difference between pressing the camera shutter button halfway and pressing it completely?,en_manual,Camera manual,shutter button half/full press,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.494,OK,"""What is the overview of the base station of a landline?"""
+2106,"How do I use the camera menu to select an item, change a setting, confirm it, and exit the menu?",en_manual,Camera manual,camera menu procedure,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.5,OK,"""How do I use the storage compartments if I want to store wet items while on board?"""
+2107,How can I restore the camera's default settings from the menu?,en_manual,Camera manual,camera default reset,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.613,OK,"""How to change the default setting of the energy saving mode?"""
+2108,How do I change the camera LCD menu language?,en_manual,Camera manual,language setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.635,OK,"""How do I charge the camera battery when I'm not using it?"""
+2109,How do I set the camera's auto power-off time?,en_manual,Camera manual,auto power off,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.673,OK,"""How do I connect the camera using a household power socket?"""
+2110,What precautions should I follow before using the camera's CMOS sensor cleaning function?,en_manual,Camera manual,CMOS sensor cleaning,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.628,OK,What safety precautions should I follow when using the fax machine?
+2111,How should I adjust the camera viewfinder diopter so the AF points look sharp?,en_manual,Camera manual,dioptric adjustment,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.521,OK,"""How do you set up the camera to fine tune the model when using it?"""
+2112,"How do I select the camera's AF mode, and when should One-Shot, AI Focus, or AI Servo be used?",en_manual,Camera manual,AF mode selection,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.523,OK,"""How do I select the AF Mode when before taking a picture?"""
+2113,What should I do when autofocus fails and I need to focus the camera manually?,en_manual,Camera manual,manual focusing,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.559,OK,What should I do when the boat shows an over-temperature warning?
+2114,"What are the camera's evaluative, partial, and center-weighted average metering modes used for?",en_manual,Camera manual,metering modes,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.466,OK,"""What are the essential preparation checks to perform before using a snowmobile?"""
+2115,How can I enable red-eye reduction when using the camera's built-in flash?,en_manual,Camera manual,red-eye reduction,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.5,OK,"""How do I print photos using the camera's CP direct method after taking them?"""
+2116,How does FE lock work when using flash photography on the camera?,en_manual,Camera manual,FE lock,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.541,OK,How do I lower the roll bar on the lawn mower?
+2117,How do I set auto exposure bracketing on the camera and how are the three shots exposed?,en_manual,Camera manual,AEB exposure bracketing,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.497,OK,How do I set the light timer on the over-the-range microwave?
+2118,"When should mirror lockup be used on the camera, and what are the basic shooting steps?",en_manual,Camera manual,mirror lockup,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.506,OK,"""How should fire extinguishers be stored on board and where should they be placed?"""
+2119,How can I silence the camera beeper from the menu?,en_manual,Camera manual,beeper silence,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.623,OK,How can I check the battery level on the landline phone?
+2120,How can I prevent the camera from shooting when no CF card is installed?,en_manual,Camera manual,shoot without card setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.612,OK,How can I power the camera from a household electrical outlet?
+2121,"How should I open, close, and secure the boat fuel-fill cap before and after refueling?",en_manual,Boat manual,fuel fill cap,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.527,OK,How should I connect the base station for the landline phone?
+2122,How should I deploy and stow the boat boarding ladder so it is locked before departure?,en_manual,Boat manual,boarding ladder,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.513,OK,What should I do when the boat shows an over-temperature warning?
+2123,How should dock lines be tied to the boat cleats when securing the boat at a dock?,en_manual,Boat manual,mooring cleats,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.517,OK,"""How to open the battery compartment when manipulating the boat?"""
+2124,How should I use the boat horn or sound signal when warning nearby vessels?,en_manual,Boat manual,horn operation,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.544,OK,How should I connect the base station for the landline phone?
+2125,"What should I check about boat hatches, cushions, and lockers before getting underway?",en_manual,Boat manual,hatch and cushion securing,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.57,OK,What should I do when the boat shows an over-temperature warning?
+2126,What should I check about the windshield and operator visibility before operating the boat?,en_manual,Boat manual,windshield and visibility,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.555,OK,"""What should I do if face over temperature warning on the boat?"""
+2127,What should I check about boat drain plugs before launching and after removing the boat from the water?,en_manual,Boat manual,drain plug before launch,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.503,OK,"""What should I do if face over temperature warning on the boat?"""
+2128,What precautions should I follow when connecting the boat battery charger at dockside?,en_manual,Boat manual,dockside battery charging,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.706,OK,What safety precautions should I follow when using the fax machine?
+2129,"Before making the first coffee, what rinsing or preparation steps should be completed on the coffee machine?",en_manual,Coffee machine manual,first use rinse,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.591,OK,"Before storage, frost protection, or maintenance, how should I empty the coffee machine system?"
+2130,How should I empty and reinstall the used capsule container and drip tray on the coffee machine?,en_manual,Coffee machine manual,capsule container emptying,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.568,OK,How can I change the default energy-saving setting on the coffee machine?
+2131,What should I prepare before running the coffee machine descaling program?,en_manual,Coffee machine manual,descaling preparation,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.569,OK,What steps should I follow to program the coffee machine water volume?
+2132,How can I set the coffee machine water hardness level and why does it matter?,en_manual,Coffee machine manual,water hardness setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.557,OK,How do I turn on and use the coffee machine energy saving mode?
+2133,How should the milk frother or steam nozzle be cleaned after preparing milk drinks?,en_manual,Coffee machine manual,milk frother cleaning,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.458,OK,"""How do I use the jet wash function to clean the boat after using it?"""
+2134,What should I do when the coffee machine shows a descaling or maintenance alert?,en_manual,Coffee machine manual,descaling alert,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.593,OK,What should I do when the boat shows an over-temperature warning?
+2135,How should I clean and dry the earphone charging contacts before placing them in the case?,en_manual,Earphones manual,charging contact care,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.511,OK,"""What is the proper procedure for cleaning the sensors and charging contacts on a vacuum cleaner?"""
+2136,What do the charging case indicator lights tell me about earphone or case battery status?,en_manual,Earphones manual,charging case indicators,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.534,OK,"If the charging case battery is low, how do I charge the earphones case?"
+2137,How should I choose and install ear tips so the earphones fit securely and sound correct?,en_manual,Earphones manual,ear tip selection,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.464,OK,"""How should I clean my coffee maker after I use it so that it can last longer?"""
+2138,What activities are not covered by the earphones' water resistance precautions?,en_manual,Earphones manual,water resistance limits,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.45,OK,"""What are the steps to power the camera?"""
+2139,"How can I add, open, or delete bookmarks while reading an eBook on the eReader?",en_manual,eReader manual,bookmark management,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.5,OK,How can I change the default energy-saving setting on the coffee machine?
+2140,How can I change font size or page display settings while reading on the eReader?,en_manual,eReader manual,font size setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.558,OK,How can I change the default energy-saving setting on the coffee machine?
+2141,"How can I delete an unwanted eBook, audio file, or photo from the eReader?",en_manual,eReader manual,file deletion,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.476,OK,"""How can you update the BIOS file of a motherboard?"""
+2142,How can I adjust the eReader screen backlight or sleep timeout setting?,en_manual,eReader manual,screen backlight timeout,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.485,OK,How do I set the light timer on the over-the-range microwave?
+2143,"What file formats should I check before copying books, music, or videos to the eReader?",en_manual,eReader manual,supported file formats,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.497,OK,What operating requirements should I satisfy before using the Jet Ski?
+2144,"How should I connect the eReader to a computer to copy eBooks, music, photos, or videos?",en_manual,eReader manual,eReader file transfer,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.523,OK,How should I connect the base station for the landline phone?
+2145,How should I clear a paper jam in the fax machine without damaging rollers or covers?,en_manual,Fax manual,paper jam clearing,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.503,OK,What steps should I follow to program the coffee machine water volume?
+2146,What should I check if the fax machine has power but cannot send or receive through the telephone line?,en_manual,Fax manual,telephone line connection check,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.476,OK,"When connecting the fax machine, what procedure should I follow to complete the setup?"
+2147,How should I replace the fax machine toner or print cartridge without spilling toner?,en_manual,Fax manual,toner or cartridge replacement,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.527,OK,How do I turn on and use the coffee machine energy saving mode?
+2148,How should I load original documents into the fax machine document feeder to avoid jams or skewed pages?,en_manual,Fax manual,document feeder loading,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.512,OK,How should I keep my fingers safe around the fax machine mechanisms?
+2149,"How should I inspect burner flames on the grill, and what might yellow or irregular flames indicate?",en_manual,Grill manual,burner flame check,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.47,OK,"""How should fire extinguishers be stored on board and where should they be placed?"""
+2150,How should I install flame tamers and cooking grates before using the grill?,en_manual,Grill manual,flame tamers and cooking grates,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.576,OK,What should I know about indirect cooking when using the grill?
+2151,How should I preheat the grill and prepare the cooking grates before placing food on them?,en_manual,Grill manual,preheating and grate care,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.537,OK,"""How do I select the AF Mode when before taking a picture?"""
+2152,What should I do if grease ignites while using the grill?,en_manual,Grill manual,grease fire response,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.717,OK,What should I know about indirect cooking when using the grill?
+2153,How should the grill be cleaned and prepared before long-term storage?,en_manual,Grill manual,grill cleaning before storage,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.511,OK,"""How do you mount the lens of a camera when preparing for photography?"""
+2154,How should the engine shut-off cord be attached before operating the jetski?,en_manual,Jetski manual,engine shut-off switch cord,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.482,OK,"""How do I use the battery conversion feature before sailing?"""
+2155,"Why should I keep people, ropes, and loose clothing away from the jetski jet thrust nozzle?",en_manual,Jetski manual,jet thrust awareness,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.468,OK,"""In daily usage, how to open and close the hood of the jetski?"""
+2156,What should I avoid when operating a jetski in shallow water or near floating debris?,en_manual,Jetski manual,shallow water operation,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.47,OK,"""What should I do if face over temperature warning on the boat?"""
+2157,What should I do if the jetski capsizes before attempting to restart the engine?,en_manual,Jetski manual,capsized watercraft response,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.556,OK,"""What should I do if face over temperature warning on the boat?"""
+2158,How should I rinse or flush the jetski after use in salt water?,en_manual,Jetski manual,post-operation rinse,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.521,OK,"""How should I clean my coffee maker after I use it so that it can last longer?"""
+2159,What protective clothing or personal flotation equipment should riders wear on a jetski?,en_manual,Jetski manual,protective clothing,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.549,OK,"""What are the operation requirements if I want to use my jetski?"""
+2160,How should the operator shift body weight to keep the jetski stable at very low speed?,en_manual,Jetski manual,operator position at low speed,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.49,OK,"""How should I do if I want to empty the system before not in use, for frost protection or before maintenance?"""
+2161,What should I check before using a jetski to tow a skier or inflatable towable?,en_manual,Jetski manual,towing restrictions,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.493,OK,"""What are the correct techniques for crossing a slope on a snowmobile?"""
+2162,How do I register a landline handset to the base station if it is not connected?,en_manual,Landline manual,handset registration,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.511,OK,How should I connect the base station for the landline phone?
+2163,How can I adjust the landline handset ringer volume or melody for incoming calls?,en_manual,Landline manual,ringer settings,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.476,OK,"""How can you adjust the height of cut for a lawn mower with an electric deck lift?"""
+2164,How can I add or edit a contact in the landline handset phonebook?,en_manual,Landline manual,phonebook entry,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.557,OK,How can I check the battery level on the landline phone?
+2165,How can I use the base station paging function to find a misplaced handset?,en_manual,Landline manual,handset paging,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.594,OK,"""How can you connect the base station of a landline?"""
+2166,What should I check about the PTO switch before starting the lawn mower engine?,en_manual,Lawn mower manual,PTO switch before starting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.571,OK,How should I connect the base station for the landline phone?
+2167,What should I check about lawn mower tire pressure before mowing?,en_manual,Lawn mower manual,tire pressure check,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.523,OK,What should I do when the boat shows an over-temperature warning?
+2168,What should I inspect on the mower blades before operation or after hitting an object?,en_manual,Lawn mower manual,blade inspection,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.544,OK,How should I connect the base station for the landline phone?
+2169,How should I clean grass buildup from the mower deck after use?,en_manual,Lawn mower manual,deck cleaning after mowing,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.534,OK,How should I keep my fingers safe around the fax machine mechanisms?
+2170,Why should the parking brake be set and the ignition disabled before servicing the mower?,en_manual,Lawn mower manual,parking brake before service,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.491,OK,What do the Main Menu and Browser History functions do on the eReader?
+2171,How can I use the microwave kitchen timer without starting a cooking cycle?,en_manual,Microwave manual,kitchen timer,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.522,OK,"""How do I select the AF Mode when before taking a picture?"""
+2172,How can I operate the microwave vent fan and adjust fan speed while cooking on the cooktop?,en_manual,Microwave manual,vent fan controls,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.542,OK,"""How to open the livewell and add water on the boat?"""
+2173,How can I turn the microwave child lock or control lock on and off?,en_manual,Microwave manual,child lock,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.496,OK,How can I power the camera from a household electrical outlet?
+2174,How can I turn the microwave turntable function on or off when using oversized dishes?,en_manual,Microwave manual,turntable setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.5,OK,"""How do I use the jet wash function to clean the boat after using it?"""
+2175,How can I set a microwave cooking power level below full power?,en_manual,Microwave manual,power level setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.521,OK,How can I check the battery level on the landline phone?
+2176,"Where should I connect the CPU fan cable on the motherboard, and why is that header important?",en_manual,Motherboard manual,CPU fan header,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.477,OK,How should I connect the base station for the landline phone?
+2177,How should I install an M.2 storage device and secure it with the mounting screw?,en_manual,Motherboard manual,M2 storage slot,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.512,OK,"""How should fire extinguishers be stored on board and where should they be placed?"""
+2178,"How should I identify and connect front-panel power, reset, and LED cables on the motherboard?",en_manual,Motherboard manual,front panel header cables,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.49,OK,"""How can you set the rear panel connectors of a motherboard?"""
+2179,How should I connect front-panel USB cables to the correct motherboard headers?,en_manual,Motherboard manual,USB front panel headers,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.504,OK,"""How can you secure the motherboard to the chassis?"""
+2180,"What is the CMOS battery used for on the motherboard, and when might it need replacement?",en_manual,Motherboard manual,CMOS battery,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.489,OK,"""What is the proper procedure for cleaning the front caster wheel of a vacuum cleaner?"""
+2181,How should chassis fan cables be connected to motherboard fan headers for cooling?,en_manual,Motherboard manual,chassis fan headers,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.49,OK,How should I connect the base station for the landline phone?
+2182,What should I check about liquid amount before starting a pressure-cooking program?,en_manual,Pressure cooker air fryer manual,minimum liquid before pressure cooking,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.523,OK,"""What do you know about anti-block shield for a multi-use pressure cooker and air fryer?"""
+2183,How should I position the air fryer basket or tray so hot air can circulate properly?,en_manual,Pressure cooker air fryer manual,air fryer basket use,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.573,OK,"""How should I clean my coffee maker after I use it so that it can last longer?"""
+2184,How should I use or cancel the Keep Warm function after pressure cooking?,en_manual,Pressure cooker air fryer manual,keep warm function,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.559,OK,"""How do I use the jet wash function to clean the boat after using it?"""
+2185,How can I set a delayed start program on the multi-use pressure cooker?,en_manual,Pressure cooker air fryer manual,delay start program,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.631,OK,"""How can you set quick release for a multi-use pressure cooker and air fryer?"""
+2186,How should I align the lid marks before locking or unlocking the pressure cooker lid?,en_manual,Pressure cooker air fryer manual,lid alignment marks,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.529,OK,"""How can you install the sealing ring for a multi-use pressure cooker and air fryer?"""
+2187,How should I prepare the robot vacuum battery if the robot will not be used for a long time?,en_manual,Robot vacuum manual,battery storage,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.556,OK,"""How do I charge the camera battery when I'm not using it?"""
+2188,"Why should robot vacuum cliff sensors be kept clean, especially near stairs or dark floors?",en_manual,Robot vacuum manual,cliff sensor precautions,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.391,OK,"""How should fire extinguishers be stored on board and where should they be placed?"""
+2189,What should I check if the robot vacuum drive wheels are not moving smoothly?,en_manual,Robot vacuum manual,wheel debris check,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.549,OK,What should I do when the boat shows an over-temperature warning?
+2190,How can I set or change a robot vacuum cleaning schedule for automatic cleaning?,en_manual,Robot vacuum manual,cleaning schedule,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.486,OK,"""How can you set silicone cap and float valve for a multi-use pressure cooker and air fryer?"""
+2191,Why should the robot vacuum not be used to pick up liquids or wet debris?,en_manual,Robot vacuum manual,liquid and wet debris limits,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.443,OK,"""How do I load the boat when the cruise is over?"""
+2192,How should I warm up a snowmobile engine before riding in cold conditions?,en_manual,Snowmobile manual,engine warm-up,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.451,OK,"""How do I select the AF Mode when before taking a picture?"""
+2193,How should I test or use the snowmobile emergency stop switch before riding?,en_manual,Snowmobile manual,emergency stop switch,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.526,OK,"""How do I use the battery conversion feature before sailing?"""
+2194,What should I check around the snowmobile fuel cap and vent before a ride?,en_manual,Snowmobile manual,fuel cap and vent,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.576,OK,What should I do when the boat shows an over-temperature warning?
+2195,"How should I clean and dry a snowmobile after riding in wet, salty, or dirty conditions?",en_manual,Snowmobile manual,post-ride cleaning,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.443,OK,"""How should I clean my coffee maker after I use it so that it can last longer?"""
+2196,How should I check snowmobile track tension or condition during routine maintenance?,en_manual,Snowmobile manual,track tension check,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.495,OK,"""How should I do if I want to empty the system before not in use, for frost protection or before maintenance?"""
+2197,How can I set a television sleep timer so it turns off automatically?,en_manual,TV/radio manual,sleep timer,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.518,OK,"""How can I use the bilge pump of the boat?"""
+2198,"After connecting an antenna, how can I run a channel scan so the television stores available channels?",en_manual,TV/radio manual,channel scan after antenna setup,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.481,OK,How can I check the battery level on the landline phone?
+2199,"Before searching for channels on a television, how should I choose between air antenna and cable input?",en_manual,TV/radio manual,air cable tuning choice,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.441,OK,"Before sailing, how should I operate the boat battery conversion switches?"
+2200,"How can I change television audio options such as stereo, SAP, or audio language when available?",en_manual,TV/radio manual,audio language setting,来自英文汇总手册中未被原公开题直接覆盖的操作、设置、维护或安全知识点,0.461,OK,How can I check the battery level on the landline phone?
